@@ -1,0 +1,497 @@
+<html lang="en-US"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="x-pjax-version" content="f1e9e88">
+    <title>osTicket :: Staff Control Panel</title>
+    <!--[if IE]>
+    <style type="text/css">
+        .tip_shadow { display:block !important; }
+    </style>
+    <![endif]-->
+    <script type="text/javascript" src="/ostDemo/js/jquery-3.4.0.min.js?f1e9e88"></script>
+    <link rel="stylesheet" href="/ostDemo/css/thread.css?f1e9e88" media="all">
+    <link rel="stylesheet" href="/ostDemo/scp/css/scp.css?f1e9e88" media="all">
+    <link rel="stylesheet" href="/ostDemo/css/redactor.css?f1e9e88" media="screen">
+    <link rel="stylesheet" href="/ostDemo/scp/css/typeahead.css?f1e9e88" media="screen">
+    <link type="text/css" href="/ostDemo/css/ui-lightness/jquery-ui-1.10.3.custom.min.css?f1e9e88" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/ostDemo/css/jquery-ui-timepicker-addon.css?f1e9e88" media="all">
+    <link type="text/css" rel="stylesheet" href="/ostDemo/css/font-awesome.min.css?f1e9e88">
+    <link rel="stylesheet" href="style/scp.css" media="screen">
+    <link rel="stylesheet" href="style/dropdown.css" media="screen">
+    <link rel="stylesheet" href="style/styleti.css" media="screen"> 
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/ostDemo/css/font-awesome-ie7.min.css?f1e9e88"/>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="/ostDemo/scp/css/dropdown.css?f1e9e88">
+    <link type="text/css" rel="stylesheet" href="/ostDemo/css/loadingbar.css?f1e9e88">
+    <link type="text/css" rel="stylesheet" href="/ostDemo/css/flags.css?f1e9e88">
+    <link type="text/css" rel="stylesheet" href="/ostDemo/css/select2.min.css?f1e9e88">
+    <link type="text/css" rel="stylesheet" href="/ostDemo/css/rtl.css?f1e9e88">
+    <link type="text/css" rel="stylesheet" href="/ostDemo/scp/css/translatable.css?f1e9e88">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/ostDemo/images/oscar-favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/ostDemo/images/oscar-favicon-16x16.png" sizes="16x16">
+
+    
+	<meta name="csrf_token" content="e3665852e5cdf9b0530c3b5c4974598c324aa764">
+	<script type="text/javascript" src="js/ticket.js?f1e9e88"></script>
+	<script type="text/javascript" src="js/thread.js?f1e9e88"></script>
+	<meta name="tip-namespace" content="tickets.queue">
+</head>
+<body>
+<div id="container">
+        <div id="header">
+        <p id="info" class="pull-right no-pjax">Welcome, <strong>Edelmira Del Rosario</strong>.                       | <a href="/ostDemo/scp/admin.php" class="no-pjax">Admin Panel</a>
+                        | <a href="/ostDemo/scp/profile.php">Profile</a>
+            | <a href="/ostDemo/scp/logout.php?auth=b4a929ad4a84788289ddcd6069889a15" class="no-pjax">Log Out</a>
+        </p>
+        <a href="/ostDemo/scp/index.php" class="no-pjax" id="logo">
+            <span class="valign-helper"></span>
+            <script data-pagespeed-no-defer="" type="text/javascript">//<![CDATA[
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','https://webappstest02.telusinternational.com/ostDemo/scp/','nXzXivl0t7',true,false,'xgkl4Snpj8I');
+//]]></script><img src="/ostDemo/scp/logo.php?1581691727" alt="osTicket — Customer Support System" data-pagespeed-url-hash="2821438446" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+        </a>
+    </div>
+    <div id="pjax-container" class="">
+    <ul id="nav">
+<li class="inactive no-pjax"><a href="/ostDemo/scp/dashboard.php">Dashboard</a><ul>
+<li><a class="logs" href="/ostDemo/scp/dashboard.php" title="" id="nav0">Dashboard</a></li><li><a class="teams" href="/ostDemo/scp/directory.php" title="" id="nav1">Agent Directory</a></li><li><a class="users" href="/ostDemo/scp/profile.php" title="" id="nav2">My Profile</a></li>
+</ul>
+
+</li>
+<li class="inactive "><a href="/ostDemo/scp/users.php">Users</a><ul>
+<li><a class="teams" href="/ostDemo/scp/users.php" title="" id="nav0">User Directory</a></li><li><a class="departments" href="/ostDemo/scp/orgs.php" title="" id="nav1">Organizations</a></li>
+</ul>
+
+</li>
+<li class="inactive "><a href="/ostDemo/scp/tasks.php">Tasks</a><ul>
+<li><a class="Ticket" href="/ostDemo/scp/tasks.php" title="" id="nav0">Tasks</a></li>
+</ul>
+
+</li>
+<li class="active "><a href="/ostDemo/scp/tickets.php">Tickets</a>
+</li>
+<li class="inactive "><a href="/ostDemo/scp/kb.php">Knowledgebase</a><ul>
+<li><a class="kb" href="/ostDemo/scp/kb.php" title="" id="nav0">FAQs</a></li><li><a class="faq-categories" href="/ostDemo/scp/categories.php" title="" id="nav1">Categories</a></li><li><a class="canned" href="/ostDemo/scp/canned.php" title="" id="nav2">Canned Responses</a></li>
+</ul>
+
+</li>
+    </ul>
+    <nav class="jb-overflowmenu" id="customQ_nav">
+  <ul id="sub_nav" class="jb-overflowmenu-menu jb-overflowmenu-menu-primary jb-overflowmenu-helper-postion">
+<li class="top-queue item active">
+  <a href="tickets.php?queue=1" class="Ticket"><i class="small icon-sort-down pull-right"></i>Open  </a>
+  <div class="customQ-dropdown">
+    <ul class="scroll-height">
+      <!-- Add top-level queue (with count) -->
+
+            <!-- Start Dropdown and child queues -->
+      <!-- SubQ class: only if top level Q has subQ -->
+<li>
+
+  <span class="personalQmenu    pull-right newItemQ queue-count" data-queue-id="2"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate " href="tickets.php?queue=2" title="Open">
+      Open          </a>
+
+    </li>
+<!-- SubQ class: only if top level Q has subQ -->
+<li>
+
+  <span class="personalQmenu    pull-right newItemQ queue-count" data-queue-id="3"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate " href="tickets.php?queue=3" title="Answered">
+      Answered          </a>
+
+    </li>
+<!-- SubQ class: only if top level Q has subQ -->
+<li>
+
+  <span class="personalQmenu    pull-right newItemQ queue-count" data-queue-id="4"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate " href="tickets.php?queue=4" title="Overdue">
+      Overdue          </a>
+
+    </li>
+    </ul>
+    <!-- Add Queue button sticky at the bottom -->
+    <div class="add-queue">
+      <a class="full-width" onclick="javascript:
+        var pid = 1;
+        $.dialog('ajax.php/tickets/search?parent_id='+pid, 201);">
+        <span><i class="green icon-plus-sign"></i>
+          Add personal queue</span>
+      </a>
+    </div>
+  </div>
+</li>
+<li class="top-queue item ">
+  <a href="tickets.php?queue=5" class="Ticket"><i class="small icon-sort-down pull-right"></i>My Tickets  </a>
+  <div class="customQ-dropdown">
+    <ul class="scroll-height">
+      <!-- Add top-level queue (with count) -->
+
+            <!-- Start Dropdown and child queues -->
+      <!-- SubQ class: only if top level Q has subQ -->
+<li>
+
+  <span class="personalQmenu    pull-right newItemQ queue-count" data-queue-id="6"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate " href="tickets.php?queue=6" title="Assigned to Me">
+      Assigned to Me          </a>
+
+    </li>
+<!-- SubQ class: only if top level Q has subQ -->
+<li>
+
+  <span class="personalQmenu    pull-right newItemQ queue-count" data-queue-id="7"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate " href="tickets.php?queue=7" title="Assigned to Teams">
+      Assigned to Teams          </a>
+
+    </li>
+    </ul>
+    <!-- Add Queue button sticky at the bottom -->
+    <div class="add-queue">
+      <a class="full-width" onclick="javascript:
+        var pid = 5;
+        $.dialog('ajax.php/tickets/search?parent_id='+pid, 201);">
+        <span><i class="green icon-plus-sign"></i>
+          Add personal queue</span>
+      </a>
+    </div>
+  </div>
+</li>
+<li class="top-queue item ">
+  <a href="tickets.php?queue=8" class="Ticket"><i class="small icon-sort-down pull-right"></i>Closed  </a>
+  <div class="customQ-dropdown">
+    <ul class="scroll-height">
+      <!-- Add top-level queue (with count) -->
+
+            <!-- Start Dropdown and child queues -->
+      <!-- SubQ class: only if top level Q has subQ -->
+<li>
+
+  <span class="personalQmenu    pull-right newItemQ queue-count" data-queue-id="9"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate " href="tickets.php?queue=9" title="Today">
+      Today          </a>
+
+    </li>
+<!-- SubQ class: only if top level Q has subQ -->
+<li>
+
+  <span class="personalQmenu    pull-right newItemQ queue-count" data-queue-id="10"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate " href="tickets.php?queue=10" title="Yesterday">
+      Yesterday          </a>
+
+    </li>
+<!-- SubQ class: only if top level Q has subQ -->
+<li>
+
+  <span class="personalQmenu    pull-right newItemQ queue-count" data-queue-id="11"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate " href="tickets.php?queue=11" title="This Week">
+      This Week          </a>
+
+    </li>
+<!-- SubQ class: only if top level Q has subQ -->
+<li>
+
+  <span class="personalQmenu    pull-right newItemQ queue-count" data-queue-id="12"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate " href="tickets.php?queue=12" title="This Month">
+      This Month          </a>
+
+    </li>
+<!-- SubQ class: only if top level Q has subQ -->
+<li>
+
+  <span class="personalQmenu    pull-right newItemQ queue-count" data-queue-id="13"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate " href="tickets.php?queue=13" title="This Quarter">
+      This Quarter          </a>
+
+    </li>
+<!-- SubQ class: only if top level Q has subQ -->
+<li>
+
+  <span class="personalQmenu    pull-right newItemQ queue-count" data-queue-id="14"><span class="faded-more">-</span>
+  </span>
+
+  <a class="truncate " href="tickets.php?queue=14" title="This Year">
+      This Year          </a>
+
+    </li>
+    </ul>
+    <!-- Add Queue button sticky at the bottom -->
+    <div class="add-queue">
+      <a class="full-width" onclick="javascript:
+        var pid = 8;
+        $.dialog('ajax.php/tickets/search?parent_id='+pid, 201);">
+        <span><i class="green icon-plus-sign"></i>
+          Add personal queue</span>
+      </a>
+    </div>
+  </div>
+</li>
+<li class="primary-only item ">
+  <a class="Ticket" href="#" data-dialog="ajax.php/tickets/search"><i class="icon-sort-down pull-right"></i>Search</a>
+  <div class="customQ-dropdown">
+    <ul class="scroll-height">
+      <!-- Start Dropdown and child queues -->
+               </ul>
+    <!-- Add Queue button sticky at the bottom -->
+
+     <div class="add-queue">
+      <a class="full-width" onclick="javascript:
+        $.dialog('ajax.php/tickets/search', 201);">
+        <span><i class="green icon-plus-sign"></i>
+          Add personal search</span>
+      </a>
+    </div>
+  </div>
+</li>
+<li class="primary-only"><a class="newTicket" href="tickets.php?a=open" title="Open a New Ticket" id="new-ticket">New Ticket</a></li>  </ul>
+<div class="jb-overflowmenu-container jb-overflowmenu-helper-postion"><a href="javascript://" class="jb-overflowmenu-menu-secondary-handle" style="display: none;"><i class="icon-ellipsis-vertical"></i></a><ul class="jb-overflowmenu-menu jb-overflowmenu-menu-secondary jb-overflowmenu-helper-postion" style="display: none;"></ul></div></nav>
+
+        <div id="content">
+        
+<!-- SEARCH FORM START -->
+<div id="basic_search">
+  <div class="pull-right" style="height:25px">
+    <span class="valign-helper"></span>
+    
+<span class="action-button muted" data-dropdown="#sort-dropdown" data-toggle="tooltip" title="" data-original-title="Priority + Most Recently Updated">
+  <i class="icon-caret-down pull-right"></i>
+  <span><i class="icon-sort-by-attributes-alt "></i> Sort</span>
+</span>
+<div id="sort-dropdown" class="action-dropdown anchor-right" onclick="javascript:
+var $et = $(event.target),
+    query = addSearchParam({'sort': $et.data('mode'), 'dir': $et.data('dir')});
+$.pjax({
+    url: '?' + query,
+    timeout: 2000,
+    container: '#pjax-container'});
+return false;" style="display: none;">
+  <ul class="bleed-left">
+        <li class="active">
+        <a href="#" data-mode="qs-1" data-dir="1">
+          <i class="icon-fixed-width icon-hand-down"></i> Priority + Most Recently Updated</a>
+      </li>
+        <li>
+        <a href="#" data-mode="qs-2" data-dir="0">
+          <i class="icon-fixed-width "></i> Priority + Most Recently Created</a>
+      </li>
+        <li>
+        <a href="#" data-mode="qs-3" data-dir="0">
+          <i class="icon-fixed-width "></i> Priority + Due Date</a>
+      </li>
+        <li>
+        <a href="#" data-mode="qs-4" data-dir="0">
+          <i class="icon-fixed-width "></i> Due Date</a>
+      </li>
+        <li>
+        <a href="#" data-mode="qs-6" data-dir="0">
+          <i class="icon-fixed-width "></i> Create Date</a>
+      </li>
+        <li>
+        <a href="#" data-mode="qs-7" data-dir="0">
+          <i class="icon-fixed-width "></i> Update Date</a>
+      </li>
+     </ul>
+</div>
+
+  </div>
+    <form action="tickets.php" method="get" onsubmit="javascript:
+  $.pjax({
+    url:$(this).attr('action') + '?' + $(this).serialize(),
+    container:'#pjax-container',
+    timeout: 2000
+  });
+return false;">
+    <input type="hidden" name="a" value="search">
+    <input type="hidden" name="search-type" value="">
+    <div class="attached input">
+      <input type="text" class="basic-search" data-url="ajax.php/tickets/lookup" name="query" autofocus="" size="30" value="" autocomplete="off" autocorrect="off" autocapitalize="off">
+      <button type="submit" class="attached button"><i class="icon-search"></i>
+      </button>
+    </div>
+    <a href="#" onclick="javascript:
+        $.dialog('ajax.php/tickets/search', 201);">[advanced]</a>
+        <i class="help-tip icon-question-sign" href="#advanced"></i>
+    </form>
+</div>
+<!-- SEARCH FORM END -->
+
+<div class="clear"></div>
+<div style="margin-bottom:20px; padding-top:5px;">
+    <div class="sticky placeholder"></div><div class="sticky bar opaque">
+        <div class="content" style="width: 938px;">
+            <div class="pull-left flush-left">
+                <h2><a href="/ostDemo/scp/?" title="Refresh"><i class="icon-refresh"></i> Open</a>
+                                    </h2>
+            </div>
+            <div class="configureQ">
+                <i class="icon-cog"></i>
+                <div class="noclick-dropdown anchor-left">
+                    <ul>
+                        <li>
+                            <a class="no-pjax" href="#" data-dialog="ajax.php/tickets/search/1"><i class="icon-fixed-width icon-pencil"></i>
+                            Edit</a>
+                        </li>
+                        <li>
+                            <a class="no-pjax" href="#" data-dialog="ajax.php/tickets/search/create?pid=1"><i class="icon-fixed-width icon-plus-sign"></i>
+                            Add Sub Queue</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+          <div class="pull-right flush-right">
+            
+<span class="action-button" data-dropdown="#action-dropdown-statuses" data-placement="bottom" data-toggle="tooltip" title="" data-original-title="Change Status">
+    <i class="icon-caret-down pull-right"></i>
+    <a class="tickets-action" aria-label="Change Status" href="#statuses"><i class="icon-flag"></i></a>
+</span>
+<div id="action-dropdown-statuses" class="action-dropdown anchor-right" style="display: none;">
+    <ul>
+        <li>
+            <a class="no-pjax tickets-action" href="#tickets/status/reopen/1"><i class="icon-undo"></i> Open</a>
+        </li>
+            <li>
+            <a class="no-pjax tickets-action" href="#tickets/status/close/2" data-redirect="tickets.php"><i class="icon-ok-circle"></i> Resolved</a>
+        </li>
+            <li>
+            <a class="no-pjax tickets-action" href="#tickets/status/close/3" data-redirect="tickets.php"><i class="icon-ok-circle"></i> Closed</a>
+        </li>
+        </ul>
+</div>
+<span class="action-button" data-placement="bottom" data-dropdown="#action-dropdown-assign" data-toggle="tooltip" title="" data-original-title=" Assign">
+    <i class="icon-caret-down pull-right"></i>
+    <a class="tickets-action" id="tickets-assign" aria-label="Assign" href="#tickets/mass/assign"><i class="icon-user"></i></a>
+</span>
+<div id="action-dropdown-assign" class="action-dropdown anchor-right" style="display: none;">
+  <ul>
+     <li><a class="no-pjax tickets-action" href="#tickets/mass/claim"><i class="icon-chevron-sign-down"></i> Claim</a>
+     </li><li><a class="no-pjax tickets-action" href="#tickets/mass/assign/agents"><i class="icon-user"></i> Agent</a>
+     </li><li><a class="no-pjax tickets-action" href="#tickets/mass/assign/teams"><i class="icon-group"></i> Team</a>
+  </li></ul>
+</div>
+<span class="action-button">
+ <a class="tickets-action" id="tickets-transfer" data-placement="bottom" data-toggle="tooltip" title="" href="#tickets/mass/transfer" data-original-title="Transfer"><i class="icon-share"></i></a>
+</span>
+<span class="red button action-button">
+ <a class="tickets-action" id="tickets-delete" data-placement="bottom" data-toggle="tooltip" title="" href="#tickets/mass/delete" data-original-title="Delete"><i class="icon-trash"></i></a>
+</span>
+<script type="text/javascript">$(function(){$(document).off('.tickets');$(document).on('click.tickets','a.tickets-action',function(e){e.preventDefault();var $form=$('form#tickets');var count=checkbox_checker($form,1);if(count){var tids=$('.ckb:checked',$form).map(function(){return this.value;}).get();var url='ajax.php/'+$(this).attr('href').substr(1)+'?count='+count+'&tids='+tids.join(',')+'&_uid='+new Date().getTime();$.dialog(url,[201],function(xhr){$.pjax.reload('#pjax-container');});}return false;});});</script>
+            </div>
+        <a class="only sticky scroll-up" href="#" data-stop="115"><i class="icon-chevron-up icon-large"></i></a></div>
+    </div>
+</div>
+<div class="clear"></div>
+
+<form action="?" method="POST" name="tickets" id="tickets">
+<input type="hidden" name="__CSRFToken__" value="e3665852e5cdf9b0530c3b5c4974598c324aa764"> <input type="hidden" name="a" value="mass_process">
+ <input type="hidden" name="do" id="action" value="">
+
+<table class="list queue tickets" border="0" cellspacing="1" cellpadding="2" width="940">
+  <thead>
+    <tr>
+        <th style="width:12px"></th>
+<th width="100" data-id="1"><a href="?dir=1&amp;sort=1" class="1">Ticket</a></th><th width="150" data-id="10"><a href="?dir=1&amp;sort=10" class="1">Last Updated</a></th><th width="300" data-id="3"><a href="?dir=1&amp;sort=3" class="1">Subject</a></th><th width="185" data-id="4"><a href="?dir=1&amp;sort=4" class="1">From</a></th><th width="85" data-id="5"><a href="?dir=1&amp;sort=5" class="1">Priority</a></th><th width="160" data-id="8"><a href="?dir=1&amp;sort=8" class="1">Assigned To</a></th>    </tr>
+  </thead>
+  <tbody>
+<tr>        <td><input type="checkbox" class="ckb" name="tids[]" value="13"></td>
+<td style="font-weight:bold"><div style="font-weight:bold"><span class="Icon webTicket"></span><a style="display: inline" class="preview" data-preview="#tickets/13/preview" href="/ostDemo/scp/tickets.php?id=13">577295</a></div></td><td>2/14/20 11:18 AM</td><td style="font-weight:bold"><div style="font-weight:bold"><span class="pull-left"><span class="Icon overdueTicket"></span></span><span class="truncate" style="max-width:275px"><a style="display:inline" href="/ostDemo/scp/tickets.php?id=13">Payroll</a></span></div></td><td>oscar merino</td><td style="background-color:#FEE7E7"><div style="background-color:#FEE7E7">Emergency</div></td><td>Cosmin Adam</td></tr><tr>        <td><input type="checkbox" class="ckb" name="tids[]" value="12"></td>
+<td style="font-weight:bold"><div style="font-weight:bold"><span class="Icon webTicket"></span><a style="display: inline" class="preview" data-preview="#tickets/12/preview" href="/ostDemo/scp/tickets.php?id=12">890449</a></div></td><td>2/14/20 11:19 AM</td><td style="font-weight:bold"><div style="font-weight:bold"><span class="pull-left"><span class="Icon overdueTicket"></span></span><span class="truncate" style="max-width:275px"><a style="display:inline" href="/ostDemo/scp/tickets.php?id=12">Please confirm employee</a></span></div></td><td>oscar merino</td><td style="background-color:#FEE7E7"><div style="background-color:#FEE7E7">High</div></td><td>Eduardo Cortez</td></tr><tr>        <td><input type="checkbox" class="ckb" name="tids[]" value="17"></td>
+<td style="font-weight:bold"><div style="font-weight:bold"><span class="Icon webTicket"></span><a style="display: inline" class="preview" data-preview="#tickets/17/preview" href="/ostDemo/scp/tickets.php?id=17">136222</a></div></td><td>2/17/20 8:28 AM</td><td style="font-weight:bold"><div style="font-weight:bold"><span class="pull-left"><span class="Icon overdueTicket"></span></span><span class="truncate" style="max-width:275px"><a style="display:inline" href="/ostDemo/scp/tickets.php?id=17">Lateness test</a></span></div></td><td>oscar merino</td><td style="background-color:#FFFFF0"><div style="background-color:#FFFFF0">Normal</div></td><td>Oscar Merino</td></tr>  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="7">
+        Select:&nbsp;
+        <a id="selectAll" href="#ckb">All</a>&nbsp;&nbsp;
+        <a id="selectNone" href="#ckb">None</a>&nbsp;&nbsp;
+        <a id="selectToggle" href="#ckb">Toggle</a>&nbsp;&nbsp;
+              </td>
+    </tr>
+  </tfoot>
+</table>
+
+  <div>
+      <span class="faded pull-right">Showing&nbsp;1 - 3 of about 3</span>
+Page:
+<b>[1]</b>&nbsp;        <a href="#tickets/export/1" id="queue-export" class="no-pjax export">Export</a>
+        <i class="help-tip icon-question-sign" href="#export"></i>
+    </div>
+</form>
+        <link rel="stylesheet" type="text/css" href="/ostDemo/css/filedrop.css"></div>
+</div>
+    <div id="footer">
+        Copyright © 2006-2020&nbsp;TELUS International&nbsp;All Rights Reserved.    </div>
+    <div>
+        <!-- Do not remove <img src="autocron.php" alt="" width="1" height="1" border="0" /> or your auto cron will cease to function -->
+        <img src="/ostDemo/scp/autocron.php" alt="" width="1" height="1" border="0" data-pagespeed-url-hash="2421126502" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+        <!-- Do not remove <img src="autocron.php" alt="" width="1" height="1" border="0" /> or your auto cron will cease to function -->
+    </div>
+</div>
+<div id="overlay"></div>
+<div id="loading" style="top: 248px; left: 745px;">
+    <i class="icon-spinner icon-spin icon-3x pull-left icon-light"></i>
+    <h1>Loading ...</h1>
+</div>
+<div class="dialog draggable ui-draggable" style="display: none; top: 106.286px; left: 583px;" id="popup">
+    <div id="popup-loading">
+        <h1 style="margin-bottom: 20px;"><i class="icon-spinner icon-spin icon-large"></i>
+        Loading ...</h1>
+    </div>
+    <div class="body"></div>
+</div>
+<div style="display: none; top: 106.286px; left: 658px;" class="dialog" id="alert">
+    <h3><i class="icon-warning-sign"></i> <span id="title"></span></h3>
+    <a class="close" href=""><i class="icon-remove-circle"></i></a>
+    <hr>
+    <div id="body" style="min-height: 20px;"></div>
+    <hr style="margin-top:3em">
+    <p class="full-width">
+        <span class="buttons pull-right">
+            <input type="button" value="OK" class="close ok">
+        </span>
+     </p>
+    <div class="clear"></div>
+</div>
+
+<script type="text/javascript" src="/ostDemo/js/jquery.pjax.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/scp/js/bootstrap-typeahead.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/js/jquery-ui-1.12.1.custom.min.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/js/jquery-ui-timepicker-addon.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/js/jquery-ui-sliderAccess.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/scp/js/scp.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/js/filedrop.field.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/js/select2.min.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/scp/js/tips.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/js/redactor.min.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/js/redactor-osticket.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/js/redactor-plugins.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/scp/js/jquery.translatable.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/scp/js/jquery.dropdown.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/scp/js/bootstrap-tooltip.js?f1e9e88"></script>
+<script type="text/javascript" src="/ostDemo/scp/js/jb.overflow.menu.js?f1e9e88"></script>
+<link type="text/css" rel="stylesheet" href="/ostDemo/scp/css/tooltip.css?f1e9e88">
+<script type="text/javascript">getConfig().resolve({"lock_time":180,"html_thread":true,"date_format":"m\/d\/y","lang":"en_US","short_lang":"en","has_rtl":false,"lang_flag":"es","primary_lang_flag":"us","primary_language":"en-US","secondary_languages":["en_GB","zh_CN","es_ES"],"page_size":"25","path":"\/ostDemo\/"});</script>
+
+
+<ul class="typeahead dropdown-menu" style="display: none;"></ul></body></html>

@@ -92,7 +92,7 @@
    
    /* For devices larger than 550px */
    @media (min-width: 550px) {
-     .#container {
+     #container {
        width: 80%;
        padding: 1em 0 }
      .column,
@@ -204,4 +204,17 @@ input[type="button"] {
     color:  #2B8000;
     background-color: #ffffff;
     border-color:  #2B8000;
+  }
+
+  .list.queue.tickets {
+    width: 100%;
+  }
+
+
+  /*--------------------------------------------------------------*/
+
+  #pjax-container {
+    background: #fff;
+    height: 95%;
+    margin: 0 auto;
   }
