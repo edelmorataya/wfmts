@@ -1,0 +1,1199 @@
+<html lang="en-US"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="x-pjax-version" content="f1e9e88">
+    <title>osTicket :: Admin Control Panel</title>
+    <!--[if IE]>
+    <style type="text/css">
+        .tip_shadow { display:block !important; }
+    </style>
+    <![endif]-->
+    <script type="text/javascript" src="/ostDemo/js/jquery-3.4.0.min.js,qf1e9e88.pagespeed.jm.86wgsCDiXr.js"></script>
+    <link rel="stylesheet" href="/ostDemo/A.css,,_thread.css,,qf1e9e88+scp,,_css,,_scp.css,,qf1e9e88,Mcc.EShJ1tY69M.css.pagespeed.cf.DmQDkzszBO.css" media="all">
+    
+    <link rel="stylesheet" href="/ostDemo/A.css,,_redactor.css,,qf1e9e88+scp,,_css,,_typeahead.css,,qf1e9e88+css,,_ui-lightness,,_jquery-ui-1.10.3.custom.min.css,,qf1e9e88,Mcc.WxuA8iTDLY.css.pagespeed.cf.VXXpTnICS8.css" media="screen">
+    
+    
+    <style media="all">.ui-timepicker-div .ui-widget-header{margin-bottom:8px}.ui-timepicker-div dl{text-align:left}.ui-timepicker-div dl dt{float:left;clear:left;padding:0 0 0 5px}.ui-timepicker-div dl dd{margin:0 10px 10px 40%}.ui-timepicker-div td{font-size:90%}.ui-tpicker-grid-label{background:none;border:none;margin:0;padding:0}.ui-timepicker-div .ui_tpicker_unit_hide{display:none}.ui-timepicker-div .ui_tpicker_time .ui_tpicker_time_input{background:none;color:inherit;border:none;outline:none;border-bottom:solid 1px #555;width:95%}.ui-timepicker-div .ui_tpicker_time .ui_tpicker_time_input:focus{border-bottom-color:#aaa}.ui-timepicker-rtl{direction:rtl}.ui-timepicker-rtl dl{text-align:right;padding:0 5px 0 0}.ui-timepicker-rtl dl dt{float:right;clear:right}.ui-timepicker-rtl dl dd{margin:0 40% 10px 10px}.ui-timepicker-div.ui-timepicker-oneLine{padding-right:2px}.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_time,.ui-timepicker-div.ui-timepicker-oneLine dt{display:none}.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_time_label{display:block;padding-top:2px}.ui-timepicker-div.ui-timepicker-oneLine dl{text-align:right}.ui-timepicker-div.ui-timepicker-oneLine dl dd,.ui-timepicker-div.ui-timepicker-oneLine dl dd>div{display:inline-block;margin:0}.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_minute:before,.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_second:before{content:':';display:inline-block}.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_millisec:before,.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_microsec:before{content:'.';display:inline-block}.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_unit_hide,.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_unit_hide:before{display:none}</style>
+    <link type="text/css" rel="stylesheet" href="/ostDemo/css/A.font-awesome.min.css,qf1e9e88.pagespeed.cf.AwjM0kvmv6.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/ostDemo/css/font-awesome-ie7.min.css?f1e9e88"/>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="/ostDemo/scp,_css,_dropdown.css,qf1e9e88+css,_loadingbar.css,qf1e9e88+css,_flags.css,qf1e9e88+css,_select2.min.css,qf1e9e88+css,_rtl.css,qf1e9e88+scp,_css,_translatable.css,qf1e9e88+scp,_css,_tooltip.css,qf1e9e88.pagespeed.cc.Arlg3fHsSj.css">
+    
+    
+    
+    
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/ostDemo/images/xoscar-favicon-32x32.png.pagespeed.ic.yIYMpQSA4n.webp" sizes="32x32">
+    <link rel="icon" type="image/png" href="/ostDemo/images/xoscar-favicon-16x16.png.pagespeed.ic.KK_kYK8FCV.webp" sizes="16x16">
+
+    
+	<meta name="csrf_token" content="8b7d869bb9cbad962869a6297d82a1951847ad24">
+	<meta name="tip-namespace" content="settings.system">
+</head>
+<body>
+<div id="container">
+        <div id="header">
+        <p id="info" class="pull-right no-pjax">Welcome, <strong>Edelmira</strong>.                       | <a href="/ostDemo/scp/index.php" class="no-pjax">Agent Panel</a>
+                        | <a href="/ostDemo/scp/profile.php">Profile</a>
+            | <a href="/ostDemo/scp/logout.php?auth=1d3791fce49c5714c055b4320eaab179" class="no-pjax">Log Out</a>
+        </p>
+        <a href="/ostDemo/scp/index.php" class="no-pjax" id="logo">
+            <span class="valign-helper"></span>
+            <script data-pagespeed-no-defer="" type="text/javascript">//<![CDATA[
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','https://webappstest02.telusinternational.com/ostDemo/scp/settings.php','nXzXivl0t7',true,false,'G_ln5ejhVHo');
+//]]></script><img src="/ostDemo/scp/logo.php?1581691727" alt="osTicket — Customer Support System" data-pagespeed-url-hash="2821438446" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+        </a>
+    </div>
+    <div id="pjax-container" class="">
+    <ul id="nav">
+<li class="inactive "><a href="/ostDemo/scp/logs.php">Dashboard</a><ul>
+<li><a class="logs" href="/ostDemo/scp/logs.php" title="" id="nav0">System Logs</a></li><li><a class="lists" href="/ostDemo/scp/audits.php" title="" id="nav1">Audit Logs</a></li><li><a class="preferences" href="/ostDemo/scp/system.php" title="" id="nav2">Information</a></li>
+</ul>
+
+</li>
+<li class="active "><a href="/ostDemo/scp/settings.php">Settings</a>
+</li>
+<li class="inactive "><a href="/ostDemo/scp/helptopics.php">Manage</a><ul>
+<li><a class="helpTopics" href="/ostDemo/scp/helptopics.php" title="" id="nav0">Help Topics</a></li><li><a class="ticketFilters" href="/ostDemo/scp/filters.php" title="Ticket Filters" id="nav1">Filters</a></li><li><a class="sla" href="/ostDemo/scp/slas.php" title="" id="nav2">SLA</a></li><li><a class="lists" href="/ostDemo/scp/schedules.php" title="" id="nav3">Schedules</a></li><li><a class="api" href="/ostDemo/scp/apikeys.php" title="" id="nav4">API</a></li><li><a class="pages" href="/ostDemo/scp/pages.php" title="Pages" id="nav5">Pages</a></li><li><a class="forms" href="/ostDemo/scp/forms.php" title="" id="nav6">Forms</a></li><li><a class="lists" href="/ostDemo/scp/lists.php" title="" id="nav7">Lists</a></li><li><a class="api" href="/ostDemo/scp/plugins.php" title="" id="nav8">Plugins</a></li>
+</ul>
+
+</li>
+<li class="inactive "><a href="/ostDemo/scp/emails.php">Emails</a><ul>
+<li><a class="emailSettings" href="/ostDemo/scp/emails.php" title="Email Addresses" id="nav0">Emails</a></li><li><a class="email-settings" href="/ostDemo/scp/emailsettings.php" title="" id="nav1">Settings</a></li><li><a class="emailDiagnostic" href="/ostDemo/scp/banlist.php" title="Banned Emails" id="nav2">Banlist</a></li><li><a class="emailTemplates" href="/ostDemo/scp/templates.php" title="Email Templates" id="nav3">Templates</a></li><li><a class="emailDiagnostic" href="/ostDemo/scp/emailtest.php" title="Email Diagnostic" id="nav4">Diagnostic</a></li>
+</ul>
+
+</li>
+<li class="inactive "><a href="/ostDemo/scp/staff.php">Agents</a><ul>
+<li><a class="users" href="/ostDemo/scp/staff.php" title="" id="nav0">Agents</a></li><li><a class="teams" href="/ostDemo/scp/teams.php" title="" id="nav1">Teams</a></li><li><a class="lists" href="/ostDemo/scp/roles.php" title="" id="nav2">Roles</a></li><li><a class="departments" href="/ostDemo/scp/departments.php" title="" id="nav3">Departments</a></li>
+</ul>
+
+</li>
+    </ul>
+    <nav class="" id="">
+  <ul id="sub_nav">
+<li><a class="pages" href="settings.php?t=pages" title="" id="subnav0">Company</a></li><li><a class="preferences active" href="settings.php?t=system" title="" id="subnav1">System</a></li><li><a class="ticket-settings" href="settings.php?t=tickets" title="" id="subnav2">Tickets</a></li><li><a class="lists" href="settings.php?t=tasks" title="" id="subnav3">Tasks</a></li><li><a class="teams" href="settings.php?t=agents" title="" id="subnav4">Agents</a></li><li><a class="groups" href="settings.php?t=users" title="" id="subnav5">Users</a></li><li><a class="kb-settings" href="settings.php?t=kb" title="" id="subnav6">Knowledgebase</a></li>  </ul>
+</nav>
+
+        <div id="content">
+        <h2>System Settings and Preferences <small>— <span class="ltr">osTicket (v1.14.1)</span></small></h2>
+<form action="settings.php?t=system" method="post" class="save">
+<input type="hidden" name="__CSRFToken__" value="8b7d869bb9cbad962869a6297d82a1951847ad24"><input type="hidden" name="t" value="system">
+<table class="form_table settings_table" width="940" border="0" cellspacing="0" cellpadding="2">
+    <thead>
+        <tr>
+            <th colspan="2">
+                <em><b>General Settings</b></em>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td width="220" class="required">Helpdesk Status:</td>
+            <td>
+                <span>
+                <label><input type="radio" name="isonline" value="1" checked="checked">&nbsp;<b>Online</b>&nbsp;</label>
+                <label><input type="radio" name="isonline" value="0">&nbsp;<b>Offline</b></label>
+                &nbsp;<font class="error"></font>
+                <i class="help-tip icon-question-sign" href="#helpdesk_status"></i>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td width="220" class="required">Helpdesk URL:</td>
+            <td>
+                <input type="text" size="40" name="helpdesk_url" value="https://webappstest02.telusinternational.com/ostDemo/">
+                &nbsp;<font class="error">*&nbsp;</font>
+                <i class="help-tip icon-question-sign" href="#helpdesk_url"></i>
+        </td>
+        </tr>
+        <tr>
+            <td width="220" class="required">Helpdesk Name/Title:</td>
+            <td><input type="text" size="40" name="helpdesk_title" value="Global OSTicket">
+                &nbsp;<font class="error">*&nbsp;</font>
+                <i class="help-tip icon-question-sign" href="#helpdesk_name_title"></i>
+            </td>
+        </tr>
+        <tr>
+            <td width="220" class="required">Default Department:</td>
+            <td>
+                <select name="default_dept_id" data-quick-add="department">
+                    <option value="">— Select Default Department —</option>
+                                                <option value="2">WFM El Salvador</option>
+                                                    <option value="1" selected="selected">WFM Romania</option>
+                                            <option value="0" data-quick-add="">— Add New —</option>
+                </select>&nbsp;<font class="error">*&nbsp;</font>
+                <i class="help-tip icon-question-sign" href="#default_department"></i>
+            </td>
+        </tr>
+        <tr>
+            <td>Collision Avoidance Duration:</td>
+            <td>
+                <input type="text" name="autolock_minutes" size="4" value="3">
+                <font class="error"></font>&nbsp;minutes                &nbsp;<i class="help-tip icon-question-sign" href="#collision_avoidance"></i>
+            </td>
+        </tr>
+        <tr><td>Default Page Size:</td>
+            <td>
+                <select name="max_page_size">
+                                            <option value="5">5</option>
+                                                <option value="10">10</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                                <option selected="selected" value="25">25</option>
+                                                <option value="30">30</option>
+                                                <option value="35">35</option>
+                                                <option value="40">40</option>
+                                                <option value="45">45</option>
+                                                <option value="50">50</option>
+                                        </select>
+                <i class="help-tip icon-question-sign" href="#default_page_size"></i>
+            </td>
+        </tr>
+        <tr>
+            <td>Default Log Level:</td>
+            <td>
+                <select name="log_level">
+                    <option value="0">None (Disable Logger)</option>
+                    <option value="3"> DEBUG</option>
+                    <option value="2" selected="selected"> WARN</option>
+                    <option value="1"> ERROR</option>
+                </select>
+                <font class="error">&nbsp;</font>
+                <i class="help-tip icon-question-sign" href="#default_log_level"></i>
+            </td>
+        </tr>
+        <tr>
+            <td>Purge Logs:</td>
+            <td>
+                <select name="log_graceperiod">
+                    <option value="0" selected="">Never Purge Logs</option>
+                                            <option value="1">
+                            After 1 month                        </option>
+                                                <option value="2">
+                            After 2 months                        </option>
+                                                <option value="3">
+                            After 3 months                        </option>
+                                                <option value="4">
+                            After 4 months                        </option>
+                                                <option value="5">
+                            After 5 months                        </option>
+                                                <option value="6">
+                            After 6 months                        </option>
+                                                <option value="7">
+                            After 7 months                        </option>
+                                                <option value="8">
+                            After 8 months                        </option>
+                                                <option value="9">
+                            After 9 months                        </option>
+                                                <option value="10">
+                            After 10 months                        </option>
+                                                <option value="11">
+                            After 11 months                        </option>
+                                                <option selected="selected" value="12">
+                            After 12 months                        </option>
+                                        </select>
+                <i class="help-tip icon-question-sign" href="#purge_logs"></i>
+            </td>
+        </tr>
+        <tr>
+            <td>Show Avatars:</td>
+            <td>
+                <input type="checkbox" name="enable_avatars" checked="checked">
+                Show Avatars on thread view.                <i class="help-tip icon-question-sign" href="#enable_avatars"></i>
+            </td>
+        </tr>
+        <tr>
+            <td>Enable Rich Text:</td>
+            <td>
+                <input type="checkbox" name="enable_richtext" checked="checked">
+                Enable html in thread entries and email correspondence.                <i class="help-tip icon-question-sign" href="#enable_richtext"></i>
+            </td>
+        </tr>
+        <tr>
+            <td>Allow System iFrame:</td>
+            <td><input type="text" size="40" name="allow_iframes" value="" placeholder="eg. https://domain.tld, *.domain.tld">
+                <i class="help-tip icon-question-sign" href="#allow_iframes"></i>
+                        </td>
+        </tr>
+        <tr>
+            <td>Embedded Domain Whitelist:</td>
+            <td><input type="text" size="40" name="embedded_domain_whitelist" value="" placeholder="eg. domain.tld, sub.domain.tld">
+                <i class="help-tip icon-question-sign" href="#embedded_domain_whitelist"></i>
+                        </td>
+        </tr>
+        <tr>
+            <td>ACL:</td>
+            <td><input type="text" size="40" name="acl" value="" placeholder="eg. 192.168.1.1, 192.168.2.2, 192.168.3.3">
+                &nbsp;Apply To:
+                <select name="acl_backend">
+                                        <option selected="selected" value="0">
+                        Disabled                    </option>
+                                        <option value="1">
+                        All                    </option>
+                                        <option value="2">
+                        Client Portal                    </option>
+                                        <option value="3">
+                        Staff Panel                    </option>
+                                    </select>
+                <i class="help-tip icon-question-sign" href="#acl"></i>
+                        </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <em><b>Date and Time Options</b>&nbsp;
+                <i class="help-tip icon-question-sign" href="#date_time_options"></i>
+                </em>
+            </th>
+        </tr>
+        <tr><td width="220" class="required">Default Locale:</td>
+            <td>
+                <select name="default_locale">
+                    <option value="">Use Language Preference</option>
+                                        <option value="en">English</option>
+
+                                        <option value="en_001">English (World)</option>
+
+                                        <option value="en_150">English (Europe)</option>
+
+                                        <option value="en_AG">English (Antigua and Barbuda)</option>
+
+                                        <option value="en_AI">English (Anguilla)</option>
+
+                                        <option value="en_AS">English (American Samoa)</option>
+
+                                        <option value="en_AU">English (Australia)</option>
+
+                                        <option value="en_BB">English (Barbados)</option>
+
+                                        <option value="en_BE">English (Belgium)</option>
+
+                                        <option value="en_BM">English (Bermuda)</option>
+
+                                        <option value="en_BS">English (Bahamas)</option>
+
+                                        <option value="en_BW">English (Botswana)</option>
+
+                                        <option value="en_BZ">English (Belize)</option>
+
+                                        <option value="en_CA">English (Canada)</option>
+
+                                        <option value="en_CC">English (Cocos [Keeling] Islands)</option>
+
+                                        <option value="en_CK">English (Cook Islands)</option>
+
+                                        <option value="en_CM">English (Cameroon)</option>
+
+                                        <option value="en_CX">English (Christmas Island)</option>
+
+                                        <option value="en_DG">English (Diego Garcia)</option>
+
+                                        <option value="en_DM">English (Dominica)</option>
+
+                                        <option value="en_ER">English (Eritrea)</option>
+
+                                        <option value="en_FJ">English (Fiji)</option>
+
+                                        <option value="en_FK">English (Falkland Islands)</option>
+
+                                        <option value="en_FM">English (Micronesia)</option>
+
+                                        <option value="en_GB">English (United Kingdom)</option>
+
+                                        <option value="en_GD">English (Grenada)</option>
+
+                                        <option value="en_GG">English (Guernsey)</option>
+
+                                        <option value="en_GH">English (Ghana)</option>
+
+                                        <option value="en_GI">English (Gibraltar)</option>
+
+                                        <option value="en_GM">English (Gambia)</option>
+
+                                        <option value="en_GU">English (Guam)</option>
+
+                                        <option value="en_GY">English (Guyana)</option>
+
+                                        <option value="en_HK">English (Hong Kong SAR China)</option>
+
+                                        <option value="en_IE">English (Ireland)</option>
+
+                                        <option value="en_IM">English (Isle of Man)</option>
+
+                                        <option value="en_IN">English (India)</option>
+
+                                        <option value="en_IO">English (British Indian Ocean Territory)</option>
+
+                                        <option value="en_JE">English (Jersey)</option>
+
+                                        <option value="en_JM">English (Jamaica)</option>
+
+                                        <option value="en_KE">English (Kenya)</option>
+
+                                        <option value="en_KI">English (Kiribati)</option>
+
+                                        <option value="en_KN">English (Saint Kitts and Nevis)</option>
+
+                                        <option value="en_KY">English (Cayman Islands)</option>
+
+                                        <option value="en_LC">English (Saint Lucia)</option>
+
+                                        <option value="en_LR">English (Liberia)</option>
+
+                                        <option value="en_LS">English (Lesotho)</option>
+
+                                        <option value="en_MG">English (Madagascar)</option>
+
+                                        <option value="en_MH">English (Marshall Islands)</option>
+
+                                        <option value="en_MO">English (Macau SAR China)</option>
+
+                                        <option value="en_MP">English (Northern Mariana Islands)</option>
+
+                                        <option value="en_MS">English (Montserrat)</option>
+
+                                        <option value="en_MT">English (Malta)</option>
+
+                                        <option value="en_MU">English (Mauritius)</option>
+
+                                        <option value="en_MW">English (Malawi)</option>
+
+                                        <option value="en_NA">English (Namibia)</option>
+
+                                        <option value="en_NF">English (Norfolk Island)</option>
+
+                                        <option value="en_NG">English (Nigeria)</option>
+
+                                        <option value="en_NR">English (Nauru)</option>
+
+                                        <option value="en_NU">English (Niue)</option>
+
+                                        <option value="en_NZ">English (New Zealand)</option>
+
+                                        <option value="en_PG">English (Papua New Guinea)</option>
+
+                                        <option value="en_PH">English (Philippines)</option>
+
+                                        <option value="en_PK">English (Pakistan)</option>
+
+                                        <option value="en_PN">English (Pitcairn Islands)</option>
+
+                                        <option value="en_PR">English (Puerto Rico)</option>
+
+                                        <option value="en_PW">English (Palau)</option>
+
+                                        <option value="en_RW">English (Rwanda)</option>
+
+                                        <option value="en_SB">English (Solomon Islands)</option>
+
+                                        <option value="en_SC">English (Seychelles)</option>
+
+                                        <option value="en_SD">English (Sudan)</option>
+
+                                        <option value="en_SG">English (Singapore)</option>
+
+                                        <option value="en_SH">English (Saint Helena)</option>
+
+                                        <option value="en_SL">English (Sierra Leone)</option>
+
+                                        <option value="en_SS">English (South Sudan)</option>
+
+                                        <option value="en_SX">English (Sint Maarten)</option>
+
+                                        <option value="en_SZ">English (Swaziland)</option>
+
+                                        <option value="en_TC">English (Turks and Caicos Islands)</option>
+
+                                        <option value="en_TK">English (Tokelau)</option>
+
+                                        <option value="en_TO">English (Tonga)</option>
+
+                                        <option value="en_TT">English (Trinidad and Tobago)</option>
+
+                                        <option value="en_TV">English (Tuvalu)</option>
+
+                                        <option value="en_TZ">English (Tanzania)</option>
+
+                                        <option value="en_UG">English (Uganda)</option>
+
+                                        <option value="en_UM">English (U.S. Outlying Islands)</option>
+
+                                        <option value="en_US">English (United States)</option>
+
+                                        <option value="en_US_POSIX">English (United States, Computer)</option>
+
+                                        <option value="en_VC">English (St. Vincent &amp; Grenadines)</option>
+
+                                        <option value="en_VG">English (British Virgin Islands)</option>
+
+                                        <option value="en_VI">English (U.S. Virgin Islands)</option>
+
+                                        <option value="en_VU">English (Vanuatu)</option>
+
+                                        <option value="en_WS">English (Samoa)</option>
+
+                                        <option value="en_ZA">English (South Africa)</option>
+
+                                        <option value="en_ZM">English (Zambia)</option>
+
+                                        <option value="en_ZW">English (Zimbabwe)</option>
+
+                                        <option value="es">Spanish</option>
+
+                                        <option value="es_419">Spanish (Latin America)</option>
+
+                                        <option value="es_AR">Spanish (Argentina)</option>
+
+                                        <option value="es_BO">Spanish (Bolivia)</option>
+
+                                        <option value="es_CL">Spanish (Chile)</option>
+
+                                        <option value="es_CO">Spanish (Colombia)</option>
+
+                                        <option value="es_CR">Spanish (Costa Rica)</option>
+
+                                        <option value="es_CU">Spanish (Cuba)</option>
+
+                                        <option value="es_DO">Spanish (Dominican Republic)</option>
+
+                                        <option value="es_EA">Spanish (Ceuta and Melilla)</option>
+
+                                        <option value="es_EC">Spanish (Ecuador)</option>
+
+                                        <option value="es_ES">Spanish (Spain)</option>
+
+                                        <option value="es_GQ">Spanish (Equatorial Guinea)</option>
+
+                                        <option value="es_GT">Spanish (Guatemala)</option>
+
+                                        <option value="es_HN">Spanish (Honduras)</option>
+
+                                        <option value="es_IC">Spanish (Canary Islands)</option>
+
+                                        <option value="es_MX">Spanish (Mexico)</option>
+
+                                        <option value="es_NI">Spanish (Nicaragua)</option>
+
+                                        <option value="es_PA">Spanish (Panama)</option>
+
+                                        <option value="es_PE">Spanish (Peru)</option>
+
+                                        <option value="es_PH">Spanish (Philippines)</option>
+
+                                        <option value="es_PR">Spanish (Puerto Rico)</option>
+
+                                        <option value="es_PY">Spanish (Paraguay)</option>
+
+                                        <option value="es_SV">Spanish (El Salvador)</option>
+
+                                        <option value="es_US">Spanish (United States)</option>
+
+                                        <option value="es_UY">Spanish (Uruguay)</option>
+
+                                        <option value="es_VE">Spanish (Venezuela)</option>
+
+                                        <option value="zh">Chinese</option>
+
+                                        <option value="zh_Hans">Chinese (Simplified)</option>
+
+                                        <option value="zh_Hans_CN">Chinese (Simplified, China)</option>
+
+                                        <option value="zh_Hans_HK">Chinese (Simplified, Hong Kong SAR China)</option>
+
+                                        <option value="zh_Hans_MO">Chinese (Simplified, Macau SAR China)</option>
+
+                                        <option value="zh_Hans_SG">Chinese (Simplified, Singapore)</option>
+
+                                        <option value="zh_Hant">Chinese (Traditional)</option>
+
+                                        <option value="zh_Hant_HK">Chinese (Traditional, Hong Kong SAR China)</option>
+
+                                        <option value="zh_Hant_MO">Chinese (Traditional, Macau SAR China)</option>
+
+                                        <option value="zh_Hant_TW">Chinese (Traditional, Taiwan)</option>
+
+                                    </select>
+            </td>
+        </tr>
+        <tr><td width="220" class="required">Default Time Zone:</td>
+            <td>
+                <select name="default_timezone" id="timezone-dropdown" data-placeholder="System Default" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+        <option value="Africa/Abidjan">Africa / Abidjan</option>
+        <option value="Africa/Accra">Africa / Accra</option>
+        <option value="Africa/Addis_Ababa">Africa / Addis_Ababa</option>
+        <option value="Africa/Algiers">Africa / Algiers</option>
+        <option value="Africa/Asmara">Africa / Asmara</option>
+        <option value="Africa/Bamako">Africa / Bamako</option>
+        <option value="Africa/Bangui">Africa / Bangui</option>
+        <option value="Africa/Banjul">Africa / Banjul</option>
+        <option value="Africa/Bissau">Africa / Bissau</option>
+        <option value="Africa/Blantyre">Africa / Blantyre</option>
+        <option value="Africa/Brazzaville">Africa / Brazzaville</option>
+        <option value="Africa/Bujumbura">Africa / Bujumbura</option>
+        <option value="Africa/Cairo">Africa / Cairo</option>
+        <option value="Africa/Casablanca">Africa / Casablanca</option>
+        <option value="Africa/Ceuta">Africa / Ceuta</option>
+        <option value="Africa/Conakry">Africa / Conakry</option>
+        <option value="Africa/Dakar">Africa / Dakar</option>
+        <option value="Africa/Dar_es_Salaam">Africa / Dar_es_Salaam</option>
+        <option value="Africa/Djibouti">Africa / Djibouti</option>
+        <option value="Africa/Douala">Africa / Douala</option>
+        <option value="Africa/El_Aaiun">Africa / El_Aaiun</option>
+        <option value="Africa/Freetown">Africa / Freetown</option>
+        <option value="Africa/Gaborone">Africa / Gaborone</option>
+        <option value="Africa/Harare">Africa / Harare</option>
+        <option value="Africa/Johannesburg">Africa / Johannesburg</option>
+        <option value="Africa/Juba">Africa / Juba</option>
+        <option value="Africa/Kampala">Africa / Kampala</option>
+        <option value="Africa/Khartoum">Africa / Khartoum</option>
+        <option value="Africa/Kigali">Africa / Kigali</option>
+        <option value="Africa/Kinshasa">Africa / Kinshasa</option>
+        <option value="Africa/Lagos">Africa / Lagos</option>
+        <option value="Africa/Libreville">Africa / Libreville</option>
+        <option value="Africa/Lome">Africa / Lome</option>
+        <option value="Africa/Luanda">Africa / Luanda</option>
+        <option value="Africa/Lubumbashi">Africa / Lubumbashi</option>
+        <option value="Africa/Lusaka">Africa / Lusaka</option>
+        <option value="Africa/Malabo">Africa / Malabo</option>
+        <option value="Africa/Maputo">Africa / Maputo</option>
+        <option value="Africa/Maseru">Africa / Maseru</option>
+        <option value="Africa/Mbabane">Africa / Mbabane</option>
+        <option value="Africa/Mogadishu">Africa / Mogadishu</option>
+        <option value="Africa/Monrovia">Africa / Monrovia</option>
+        <option value="Africa/Nairobi">Africa / Nairobi</option>
+        <option value="Africa/Ndjamena">Africa / Ndjamena</option>
+        <option value="Africa/Niamey">Africa / Niamey</option>
+        <option value="Africa/Nouakchott">Africa / Nouakchott</option>
+        <option value="Africa/Ouagadougou">Africa / Ouagadougou</option>
+        <option value="Africa/Porto-Novo">Africa / Porto-Novo</option>
+        <option value="Africa/Sao_Tome">Africa / Sao_Tome</option>
+        <option value="Africa/Tripoli">Africa / Tripoli</option>
+        <option value="Africa/Tunis">Africa / Tunis</option>
+        <option value="Africa/Windhoek">Africa / Windhoek</option>
+        <option value="America/Adak">America / Adak</option>
+        <option value="America/Anchorage">America / Anchorage</option>
+        <option value="America/Anguilla">America / Anguilla</option>
+        <option value="America/Antigua">America / Antigua</option>
+        <option value="America/Araguaina">America / Araguaina</option>
+        <option value="America/Argentina/Buenos_Aires">America / Argentina / Buenos_Aires</option>
+        <option value="America/Argentina/Catamarca">America / Argentina / Catamarca</option>
+        <option value="America/Argentina/Cordoba">America / Argentina / Cordoba</option>
+        <option value="America/Argentina/Jujuy">America / Argentina / Jujuy</option>
+        <option value="America/Argentina/La_Rioja">America / Argentina / La_Rioja</option>
+        <option value="America/Argentina/Mendoza">America / Argentina / Mendoza</option>
+        <option value="America/Argentina/Rio_Gallegos">America / Argentina / Rio_Gallegos</option>
+        <option value="America/Argentina/Salta">America / Argentina / Salta</option>
+        <option value="America/Argentina/San_Juan">America / Argentina / San_Juan</option>
+        <option value="America/Argentina/San_Luis">America / Argentina / San_Luis</option>
+        <option value="America/Argentina/Tucuman">America / Argentina / Tucuman</option>
+        <option value="America/Argentina/Ushuaia">America / Argentina / Ushuaia</option>
+        <option value="America/Aruba">America / Aruba</option>
+        <option value="America/Asuncion">America / Asuncion</option>
+        <option value="America/Atikokan">America / Atikokan</option>
+        <option value="America/Bahia">America / Bahia</option>
+        <option value="America/Bahia_Banderas">America / Bahia_Banderas</option>
+        <option value="America/Barbados">America / Barbados</option>
+        <option value="America/Belem">America / Belem</option>
+        <option value="America/Belize">America / Belize</option>
+        <option value="America/Blanc-Sablon">America / Blanc-Sablon</option>
+        <option value="America/Boa_Vista">America / Boa_Vista</option>
+        <option value="America/Bogota">America / Bogota</option>
+        <option value="America/Boise">America / Boise</option>
+        <option value="America/Cambridge_Bay">America / Cambridge_Bay</option>
+        <option value="America/Campo_Grande">America / Campo_Grande</option>
+        <option value="America/Cancun">America / Cancun</option>
+        <option value="America/Caracas">America / Caracas</option>
+        <option value="America/Cayenne">America / Cayenne</option>
+        <option value="America/Cayman">America / Cayman</option>
+        <option value="America/Chicago">America / Chicago</option>
+        <option value="America/Chihuahua">America / Chihuahua</option>
+        <option value="America/Costa_Rica">America / Costa_Rica</option>
+        <option value="America/Creston">America / Creston</option>
+        <option value="America/Cuiaba">America / Cuiaba</option>
+        <option value="America/Curacao">America / Curacao</option>
+        <option value="America/Danmarkshavn">America / Danmarkshavn</option>
+        <option value="America/Dawson">America / Dawson</option>
+        <option value="America/Dawson_Creek">America / Dawson_Creek</option>
+        <option value="America/Denver">America / Denver</option>
+        <option value="America/Detroit">America / Detroit</option>
+        <option value="America/Dominica">America / Dominica</option>
+        <option value="America/Edmonton">America / Edmonton</option>
+        <option value="America/Eirunepe">America / Eirunepe</option>
+        <option value="America/El_Salvador" selected="selected">America / El_Salvador</option>
+        <option value="America/Fort_Nelson">America / Fort_Nelson</option>
+        <option value="America/Fortaleza">America / Fortaleza</option>
+        <option value="America/Glace_Bay">America / Glace_Bay</option>
+        <option value="America/Godthab">America / Godthab</option>
+        <option value="America/Goose_Bay">America / Goose_Bay</option>
+        <option value="America/Grand_Turk">America / Grand_Turk</option>
+        <option value="America/Grenada">America / Grenada</option>
+        <option value="America/Guadeloupe">America / Guadeloupe</option>
+        <option value="America/Guatemala">America / Guatemala</option>
+        <option value="America/Guayaquil">America / Guayaquil</option>
+        <option value="America/Guyana">America / Guyana</option>
+        <option value="America/Halifax">America / Halifax</option>
+        <option value="America/Havana">America / Havana</option>
+        <option value="America/Hermosillo">America / Hermosillo</option>
+        <option value="America/Indiana/Indianapolis">America / Indiana / Indianapolis</option>
+        <option value="America/Indiana/Knox">America / Indiana / Knox</option>
+        <option value="America/Indiana/Marengo">America / Indiana / Marengo</option>
+        <option value="America/Indiana/Petersburg">America / Indiana / Petersburg</option>
+        <option value="America/Indiana/Tell_City">America / Indiana / Tell_City</option>
+        <option value="America/Indiana/Vevay">America / Indiana / Vevay</option>
+        <option value="America/Indiana/Vincennes">America / Indiana / Vincennes</option>
+        <option value="America/Indiana/Winamac">America / Indiana / Winamac</option>
+        <option value="America/Inuvik">America / Inuvik</option>
+        <option value="America/Iqaluit">America / Iqaluit</option>
+        <option value="America/Jamaica">America / Jamaica</option>
+        <option value="America/Juneau">America / Juneau</option>
+        <option value="America/Kentucky/Louisville">America / Kentucky / Louisville</option>
+        <option value="America/Kentucky/Monticello">America / Kentucky / Monticello</option>
+        <option value="America/Kralendijk">America / Kralendijk</option>
+        <option value="America/La_Paz">America / La_Paz</option>
+        <option value="America/Lima">America / Lima</option>
+        <option value="America/Los_Angeles">America / Los_Angeles</option>
+        <option value="America/Lower_Princes">America / Lower_Princes</option>
+        <option value="America/Maceio">America / Maceio</option>
+        <option value="America/Managua">America / Managua</option>
+        <option value="America/Manaus">America / Manaus</option>
+        <option value="America/Marigot">America / Marigot</option>
+        <option value="America/Martinique">America / Martinique</option>
+        <option value="America/Matamoros">America / Matamoros</option>
+        <option value="America/Mazatlan">America / Mazatlan</option>
+        <option value="America/Menominee">America / Menominee</option>
+        <option value="America/Merida">America / Merida</option>
+        <option value="America/Metlakatla">America / Metlakatla</option>
+        <option value="America/Mexico_City">America / Mexico_City</option>
+        <option value="America/Miquelon">America / Miquelon</option>
+        <option value="America/Moncton">America / Moncton</option>
+        <option value="America/Monterrey">America / Monterrey</option>
+        <option value="America/Montevideo">America / Montevideo</option>
+        <option value="America/Montserrat">America / Montserrat</option>
+        <option value="America/Nassau">America / Nassau</option>
+        <option value="America/New_York">America / New_York</option>
+        <option value="America/Nipigon">America / Nipigon</option>
+        <option value="America/Nome">America / Nome</option>
+        <option value="America/Noronha">America / Noronha</option>
+        <option value="America/North_Dakota/Beulah">America / North_Dakota / Beulah</option>
+        <option value="America/North_Dakota/Center">America / North_Dakota / Center</option>
+        <option value="America/North_Dakota/New_Salem">America / North_Dakota / New_Salem</option>
+        <option value="America/Ojinaga">America / Ojinaga</option>
+        <option value="America/Panama">America / Panama</option>
+        <option value="America/Pangnirtung">America / Pangnirtung</option>
+        <option value="America/Paramaribo">America / Paramaribo</option>
+        <option value="America/Phoenix">America / Phoenix</option>
+        <option value="America/Port-au-Prince">America / Port-au-Prince</option>
+        <option value="America/Port_of_Spain">America / Port_of_Spain</option>
+        <option value="America/Porto_Velho">America / Porto_Velho</option>
+        <option value="America/Puerto_Rico">America / Puerto_Rico</option>
+        <option value="America/Punta_Arenas">America / Punta_Arenas</option>
+        <option value="America/Rainy_River">America / Rainy_River</option>
+        <option value="America/Rankin_Inlet">America / Rankin_Inlet</option>
+        <option value="America/Recife">America / Recife</option>
+        <option value="America/Regina">America / Regina</option>
+        <option value="America/Resolute">America / Resolute</option>
+        <option value="America/Rio_Branco">America / Rio_Branco</option>
+        <option value="America/Santarem">America / Santarem</option>
+        <option value="America/Santiago">America / Santiago</option>
+        <option value="America/Santo_Domingo">America / Santo_Domingo</option>
+        <option value="America/Sao_Paulo">America / Sao_Paulo</option>
+        <option value="America/Scoresbysund">America / Scoresbysund</option>
+        <option value="America/Sitka">America / Sitka</option>
+        <option value="America/St_Barthelemy">America / St_Barthelemy</option>
+        <option value="America/St_Johns">America / St_Johns</option>
+        <option value="America/St_Kitts">America / St_Kitts</option>
+        <option value="America/St_Lucia">America / St_Lucia</option>
+        <option value="America/St_Thomas">America / St_Thomas</option>
+        <option value="America/St_Vincent">America / St_Vincent</option>
+        <option value="America/Swift_Current">America / Swift_Current</option>
+        <option value="America/Tegucigalpa">America / Tegucigalpa</option>
+        <option value="America/Thule">America / Thule</option>
+        <option value="America/Thunder_Bay">America / Thunder_Bay</option>
+        <option value="America/Tijuana">America / Tijuana</option>
+        <option value="America/Toronto">America / Toronto</option>
+        <option value="America/Tortola">America / Tortola</option>
+        <option value="America/Vancouver">America / Vancouver</option>
+        <option value="America/Whitehorse">America / Whitehorse</option>
+        <option value="America/Winnipeg">America / Winnipeg</option>
+        <option value="America/Yakutat">America / Yakutat</option>
+        <option value="America/Yellowknife">America / Yellowknife</option>
+        <option value="Antarctica/Casey">Antarctica / Casey</option>
+        <option value="Antarctica/Davis">Antarctica / Davis</option>
+        <option value="Antarctica/DumontDUrville">Antarctica / DumontDUrville</option>
+        <option value="Antarctica/Macquarie">Antarctica / Macquarie</option>
+        <option value="Antarctica/Mawson">Antarctica / Mawson</option>
+        <option value="Antarctica/McMurdo">Antarctica / McMurdo</option>
+        <option value="Antarctica/Palmer">Antarctica / Palmer</option>
+        <option value="Antarctica/Rothera">Antarctica / Rothera</option>
+        <option value="Antarctica/Syowa">Antarctica / Syowa</option>
+        <option value="Antarctica/Troll">Antarctica / Troll</option>
+        <option value="Antarctica/Vostok">Antarctica / Vostok</option>
+        <option value="Arctic/Longyearbyen">Arctic / Longyearbyen</option>
+        <option value="Asia/Aden">Asia / Aden</option>
+        <option value="Asia/Almaty">Asia / Almaty</option>
+        <option value="Asia/Amman">Asia / Amman</option>
+        <option value="Asia/Anadyr">Asia / Anadyr</option>
+        <option value="Asia/Aqtau">Asia / Aqtau</option>
+        <option value="Asia/Aqtobe">Asia / Aqtobe</option>
+        <option value="Asia/Ashgabat">Asia / Ashgabat</option>
+        <option value="Asia/Atyrau">Asia / Atyrau</option>
+        <option value="Asia/Baghdad">Asia / Baghdad</option>
+        <option value="Asia/Bahrain">Asia / Bahrain</option>
+        <option value="Asia/Baku">Asia / Baku</option>
+        <option value="Asia/Bangkok">Asia / Bangkok</option>
+        <option value="Asia/Barnaul">Asia / Barnaul</option>
+        <option value="Asia/Beirut">Asia / Beirut</option>
+        <option value="Asia/Bishkek">Asia / Bishkek</option>
+        <option value="Asia/Brunei">Asia / Brunei</option>
+        <option value="Asia/Chita">Asia / Chita</option>
+        <option value="Asia/Choibalsan">Asia / Choibalsan</option>
+        <option value="Asia/Colombo">Asia / Colombo</option>
+        <option value="Asia/Damascus">Asia / Damascus</option>
+        <option value="Asia/Dhaka">Asia / Dhaka</option>
+        <option value="Asia/Dili">Asia / Dili</option>
+        <option value="Asia/Dubai">Asia / Dubai</option>
+        <option value="Asia/Dushanbe">Asia / Dushanbe</option>
+        <option value="Asia/Famagusta">Asia / Famagusta</option>
+        <option value="Asia/Gaza">Asia / Gaza</option>
+        <option value="Asia/Hebron">Asia / Hebron</option>
+        <option value="Asia/Ho_Chi_Minh">Asia / Ho_Chi_Minh</option>
+        <option value="Asia/Hong_Kong">Asia / Hong_Kong</option>
+        <option value="Asia/Hovd">Asia / Hovd</option>
+        <option value="Asia/Irkutsk">Asia / Irkutsk</option>
+        <option value="Asia/Jakarta">Asia / Jakarta</option>
+        <option value="Asia/Jayapura">Asia / Jayapura</option>
+        <option value="Asia/Jerusalem">Asia / Jerusalem</option>
+        <option value="Asia/Kabul">Asia / Kabul</option>
+        <option value="Asia/Kamchatka">Asia / Kamchatka</option>
+        <option value="Asia/Karachi">Asia / Karachi</option>
+        <option value="Asia/Kathmandu">Asia / Kathmandu</option>
+        <option value="Asia/Khandyga">Asia / Khandyga</option>
+        <option value="Asia/Kolkata">Asia / Kolkata</option>
+        <option value="Asia/Krasnoyarsk">Asia / Krasnoyarsk</option>
+        <option value="Asia/Kuala_Lumpur">Asia / Kuala_Lumpur</option>
+        <option value="Asia/Kuching">Asia / Kuching</option>
+        <option value="Asia/Kuwait">Asia / Kuwait</option>
+        <option value="Asia/Macau">Asia / Macau</option>
+        <option value="Asia/Magadan">Asia / Magadan</option>
+        <option value="Asia/Makassar">Asia / Makassar</option>
+        <option value="Asia/Manila">Asia / Manila</option>
+        <option value="Asia/Muscat">Asia / Muscat</option>
+        <option value="Asia/Nicosia">Asia / Nicosia</option>
+        <option value="Asia/Novokuznetsk">Asia / Novokuznetsk</option>
+        <option value="Asia/Novosibirsk">Asia / Novosibirsk</option>
+        <option value="Asia/Omsk">Asia / Omsk</option>
+        <option value="Asia/Oral">Asia / Oral</option>
+        <option value="Asia/Phnom_Penh">Asia / Phnom_Penh</option>
+        <option value="Asia/Pontianak">Asia / Pontianak</option>
+        <option value="Asia/Pyongyang">Asia / Pyongyang</option>
+        <option value="Asia/Qatar">Asia / Qatar</option>
+        <option value="Asia/Qostanay">Asia / Qostanay</option>
+        <option value="Asia/Qyzylorda">Asia / Qyzylorda</option>
+        <option value="Asia/Riyadh">Asia / Riyadh</option>
+        <option value="Asia/Sakhalin">Asia / Sakhalin</option>
+        <option value="Asia/Samarkand">Asia / Samarkand</option>
+        <option value="Asia/Seoul">Asia / Seoul</option>
+        <option value="Asia/Shanghai">Asia / Shanghai</option>
+        <option value="Asia/Singapore">Asia / Singapore</option>
+        <option value="Asia/Srednekolymsk">Asia / Srednekolymsk</option>
+        <option value="Asia/Taipei">Asia / Taipei</option>
+        <option value="Asia/Tashkent">Asia / Tashkent</option>
+        <option value="Asia/Tbilisi">Asia / Tbilisi</option>
+        <option value="Asia/Tehran">Asia / Tehran</option>
+        <option value="Asia/Thimphu">Asia / Thimphu</option>
+        <option value="Asia/Tokyo">Asia / Tokyo</option>
+        <option value="Asia/Tomsk">Asia / Tomsk</option>
+        <option value="Asia/Ulaanbaatar">Asia / Ulaanbaatar</option>
+        <option value="Asia/Urumqi">Asia / Urumqi</option>
+        <option value="Asia/Ust-Nera">Asia / Ust-Nera</option>
+        <option value="Asia/Vientiane">Asia / Vientiane</option>
+        <option value="Asia/Vladivostok">Asia / Vladivostok</option>
+        <option value="Asia/Yakutsk">Asia / Yakutsk</option>
+        <option value="Asia/Yangon">Asia / Yangon</option>
+        <option value="Asia/Yekaterinburg">Asia / Yekaterinburg</option>
+        <option value="Asia/Yerevan">Asia / Yerevan</option>
+        <option value="Atlantic/Azores">Atlantic / Azores</option>
+        <option value="Atlantic/Bermuda">Atlantic / Bermuda</option>
+        <option value="Atlantic/Canary">Atlantic / Canary</option>
+        <option value="Atlantic/Cape_Verde">Atlantic / Cape_Verde</option>
+        <option value="Atlantic/Faroe">Atlantic / Faroe</option>
+        <option value="Atlantic/Madeira">Atlantic / Madeira</option>
+        <option value="Atlantic/Reykjavik">Atlantic / Reykjavik</option>
+        <option value="Atlantic/South_Georgia">Atlantic / South_Georgia</option>
+        <option value="Atlantic/St_Helena">Atlantic / St_Helena</option>
+        <option value="Atlantic/Stanley">Atlantic / Stanley</option>
+        <option value="Australia/Adelaide">Australia / Adelaide</option>
+        <option value="Australia/Brisbane">Australia / Brisbane</option>
+        <option value="Australia/Broken_Hill">Australia / Broken_Hill</option>
+        <option value="Australia/Currie">Australia / Currie</option>
+        <option value="Australia/Darwin">Australia / Darwin</option>
+        <option value="Australia/Eucla">Australia / Eucla</option>
+        <option value="Australia/Hobart">Australia / Hobart</option>
+        <option value="Australia/Lindeman">Australia / Lindeman</option>
+        <option value="Australia/Lord_Howe">Australia / Lord_Howe</option>
+        <option value="Australia/Melbourne">Australia / Melbourne</option>
+        <option value="Australia/Perth">Australia / Perth</option>
+        <option value="Australia/Sydney">Australia / Sydney</option>
+        <option value="Europe/Amsterdam">Europe / Amsterdam</option>
+        <option value="Europe/Andorra">Europe / Andorra</option>
+        <option value="Europe/Astrakhan">Europe / Astrakhan</option>
+        <option value="Europe/Athens">Europe / Athens</option>
+        <option value="Europe/Belgrade">Europe / Belgrade</option>
+        <option value="Europe/Berlin">Europe / Berlin</option>
+        <option value="Europe/Bratislava">Europe / Bratislava</option>
+        <option value="Europe/Brussels">Europe / Brussels</option>
+        <option value="Europe/Bucharest">Europe / Bucharest</option>
+        <option value="Europe/Budapest">Europe / Budapest</option>
+        <option value="Europe/Busingen">Europe / Busingen</option>
+        <option value="Europe/Chisinau">Europe / Chisinau</option>
+        <option value="Europe/Copenhagen">Europe / Copenhagen</option>
+        <option value="Europe/Dublin">Europe / Dublin</option>
+        <option value="Europe/Gibraltar">Europe / Gibraltar</option>
+        <option value="Europe/Guernsey">Europe / Guernsey</option>
+        <option value="Europe/Helsinki">Europe / Helsinki</option>
+        <option value="Europe/Isle_of_Man">Europe / Isle_of_Man</option>
+        <option value="Europe/Istanbul">Europe / Istanbul</option>
+        <option value="Europe/Jersey">Europe / Jersey</option>
+        <option value="Europe/Kaliningrad">Europe / Kaliningrad</option>
+        <option value="Europe/Kiev">Europe / Kiev</option>
+        <option value="Europe/Kirov">Europe / Kirov</option>
+        <option value="Europe/Lisbon">Europe / Lisbon</option>
+        <option value="Europe/Ljubljana">Europe / Ljubljana</option>
+        <option value="Europe/London">Europe / London</option>
+        <option value="Europe/Luxembourg">Europe / Luxembourg</option>
+        <option value="Europe/Madrid">Europe / Madrid</option>
+        <option value="Europe/Malta">Europe / Malta</option>
+        <option value="Europe/Mariehamn">Europe / Mariehamn</option>
+        <option value="Europe/Minsk">Europe / Minsk</option>
+        <option value="Europe/Monaco">Europe / Monaco</option>
+        <option value="Europe/Moscow">Europe / Moscow</option>
+        <option value="Europe/Oslo">Europe / Oslo</option>
+        <option value="Europe/Paris">Europe / Paris</option>
+        <option value="Europe/Podgorica">Europe / Podgorica</option>
+        <option value="Europe/Prague">Europe / Prague</option>
+        <option value="Europe/Riga">Europe / Riga</option>
+        <option value="Europe/Rome">Europe / Rome</option>
+        <option value="Europe/Samara">Europe / Samara</option>
+        <option value="Europe/San_Marino">Europe / San_Marino</option>
+        <option value="Europe/Sarajevo">Europe / Sarajevo</option>
+        <option value="Europe/Saratov">Europe / Saratov</option>
+        <option value="Europe/Simferopol">Europe / Simferopol</option>
+        <option value="Europe/Skopje">Europe / Skopje</option>
+        <option value="Europe/Sofia">Europe / Sofia</option>
+        <option value="Europe/Stockholm">Europe / Stockholm</option>
+        <option value="Europe/Tallinn">Europe / Tallinn</option>
+        <option value="Europe/Tirane">Europe / Tirane</option>
+        <option value="Europe/Ulyanovsk">Europe / Ulyanovsk</option>
+        <option value="Europe/Uzhgorod">Europe / Uzhgorod</option>
+        <option value="Europe/Vaduz">Europe / Vaduz</option>
+        <option value="Europe/Vatican">Europe / Vatican</option>
+        <option value="Europe/Vienna">Europe / Vienna</option>
+        <option value="Europe/Vilnius">Europe / Vilnius</option>
+        <option value="Europe/Volgograd">Europe / Volgograd</option>
+        <option value="Europe/Warsaw">Europe / Warsaw</option>
+        <option value="Europe/Zagreb">Europe / Zagreb</option>
+        <option value="Europe/Zaporozhye">Europe / Zaporozhye</option>
+        <option value="Europe/Zurich">Europe / Zurich</option>
+        <option value="Indian/Antananarivo">Indian / Antananarivo</option>
+        <option value="Indian/Chagos">Indian / Chagos</option>
+        <option value="Indian/Christmas">Indian / Christmas</option>
+        <option value="Indian/Cocos">Indian / Cocos</option>
+        <option value="Indian/Comoro">Indian / Comoro</option>
+        <option value="Indian/Kerguelen">Indian / Kerguelen</option>
+        <option value="Indian/Mahe">Indian / Mahe</option>
+        <option value="Indian/Maldives">Indian / Maldives</option>
+        <option value="Indian/Mauritius">Indian / Mauritius</option>
+        <option value="Indian/Mayotte">Indian / Mayotte</option>
+        <option value="Indian/Reunion">Indian / Reunion</option>
+        <option value="Pacific/Apia">Pacific / Apia</option>
+        <option value="Pacific/Auckland">Pacific / Auckland</option>
+        <option value="Pacific/Bougainville">Pacific / Bougainville</option>
+        <option value="Pacific/Chatham">Pacific / Chatham</option>
+        <option value="Pacific/Chuuk">Pacific / Chuuk</option>
+        <option value="Pacific/Easter">Pacific / Easter</option>
+        <option value="Pacific/Efate">Pacific / Efate</option>
+        <option value="Pacific/Enderbury">Pacific / Enderbury</option>
+        <option value="Pacific/Fakaofo">Pacific / Fakaofo</option>
+        <option value="Pacific/Fiji">Pacific / Fiji</option>
+        <option value="Pacific/Funafuti">Pacific / Funafuti</option>
+        <option value="Pacific/Galapagos">Pacific / Galapagos</option>
+        <option value="Pacific/Gambier">Pacific / Gambier</option>
+        <option value="Pacific/Guadalcanal">Pacific / Guadalcanal</option>
+        <option value="Pacific/Guam">Pacific / Guam</option>
+        <option value="Pacific/Honolulu">Pacific / Honolulu</option>
+        <option value="Pacific/Kiritimati">Pacific / Kiritimati</option>
+        <option value="Pacific/Kosrae">Pacific / Kosrae</option>
+        <option value="Pacific/Kwajalein">Pacific / Kwajalein</option>
+        <option value="Pacific/Majuro">Pacific / Majuro</option>
+        <option value="Pacific/Marquesas">Pacific / Marquesas</option>
+        <option value="Pacific/Midway">Pacific / Midway</option>
+        <option value="Pacific/Nauru">Pacific / Nauru</option>
+        <option value="Pacific/Niue">Pacific / Niue</option>
+        <option value="Pacific/Norfolk">Pacific / Norfolk</option>
+        <option value="Pacific/Noumea">Pacific / Noumea</option>
+        <option value="Pacific/Pago_Pago">Pacific / Pago_Pago</option>
+        <option value="Pacific/Palau">Pacific / Palau</option>
+        <option value="Pacific/Pitcairn">Pacific / Pitcairn</option>
+        <option value="Pacific/Pohnpei">Pacific / Pohnpei</option>
+        <option value="Pacific/Port_Moresby">Pacific / Port_Moresby</option>
+        <option value="Pacific/Rarotonga">Pacific / Rarotonga</option>
+        <option value="Pacific/Saipan">Pacific / Saipan</option>
+        <option value="Pacific/Tahiti">Pacific / Tahiti</option>
+        <option value="Pacific/Tarawa">Pacific / Tarawa</option>
+        <option value="Pacific/Tongatapu">Pacific / Tongatapu</option>
+        <option value="Pacific/Wake">Pacific / Wake</option>
+        <option value="Pacific/Wallis">Pacific / Wallis</option>
+        <option value="UTC">UTC</option>
+    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 300px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-timezone-dropdown-container"><span class="select2-selection__rendered" id="select2-timezone-dropdown-container" title="America / El_Salvador">America / El_Salvador</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    <button type="button" class="action-button" onclick="javascript:
+$('head').append($('<script>').attr('src', '/ostDemo/js/jstz.min.js'));
+var recheck = setInterval(function() {
+    if (window.jstz !== undefined) {
+        clearInterval(recheck);
+        var zone = jstz.determine();
+        $('#timezone-dropdown').val(zone.name()).trigger('change');
+
+    }
+}, 100);
+return false;" style="vertical-align:middle"><i class="icon-map-marker"></i> Auto Detect</button>
+
+<script type="text/javascript">$(function(){$('#timezone-dropdown').select2({allowClear:false,width:'300px'});});</script>
+                <div class="error"></div>
+            </td>
+        </tr>
+        <tr><td width="220" class="required">Date and Time Format:</td>
+            <td>
+                <select name="date_formats" onchange="javascript:
+    $('#advanced-time').toggle($(this).find(':selected').val() == 'custom');
+">
+                    <option value="" selected="selected">Locale Defaults</option>
+                    <option value="24">Locale Defaults, 24-hour Time</option>
+                    <option value="custom">— Advanced —</option>
+                </select>
+            </td>
+        </tr>
+
+    </tbody>
+    <tbody id="advanced-time" style="display:none;">
+        <tr>
+            <td width="220" class="indented required">Time Format:</td>
+            <td>
+                <input type="text" name="time_format" value="hh:mm a" class="date-format-preview">
+                    &nbsp;<font class="error">*&nbsp;</font>
+                    <em></em>
+                <span class="faded date-format-preview" data-for="time_format">
+                    5:34 PM                </span>
+            </td>
+        </tr>
+        <tr><td width="220" class="indented required">Date Format:</td>
+            <td><input type="text" name="date_format" value="MM/dd/y" class="date-format-preview">
+                        &nbsp;<font class="error">*&nbsp;</font>
+                        <em></em>
+                <span class="faded date-format-preview" data-for="date_format">
+                    3/18/20                </span>
+            </td>
+        </tr>
+        <tr><td width="220" class="indented required">Date and Time Format:</td>
+            <td><input type="text" name="datetime_format" value="MM/dd/y h:mm a" class="date-format-preview">
+                        &nbsp;<font class="error">*&nbsp;</font>
+                        <em></em>
+                <span class="faded date-format-preview" data-for="datetime_format">
+                    3/18/20 5:34 PM                </span>
+            </td>
+        </tr>
+        <tr><td width="220" class="indented required">Day, Date and Time Format:</td>
+            <td><input type="text" name="daydatetime_format" value="EEE, MMM d y h:mm a" class="date-format-preview">
+                        &nbsp;<font class="error">*&nbsp;</font>
+                        <em></em>
+                <span class="faded date-format-preview" data-for="daydatetime_format">
+                    Wednesday, March 18, 2020 at 5:34 PM                </span>
+            </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td width="220">
+                Default Schedule:
+            </td>
+            <td>
+                <select name="schedule_id">
+                    <option value="0" selected="selected">— None —</option>
+                    <option value="3">24/5</option><option value="2">24/7</option><option value="6">Monday - Friday 8am - 5pm with E.S. Holidays</option><option value="1">Monday - Friday 8am - 5pm with U.S. Holidays</option>                </select>
+                &nbsp;<span class="error"></span>&nbsp;<i class="help-tip icon-question-sign" href="#default_schedule"></i>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <em><b>System Languages</b>&nbsp;
+                <i class="help-tip icon-question-sign" href="#languages"></i>
+                </em>
+            </th>
+        </tr>
+        <tr><td>Primary Language:</td>
+            <td>
+                        <select name="system_language">
+                    <option value="">— Select a Language —</option>
+                    <option value="en_GB">English (United Kingdom)</option>
+                    <option value="en_US" selected="selected">English (United States)</option>
+                    <option value="es_ES">español (España) (Spanish (Spain))</option>
+                    <option value="zh_CN">中文（中国） (Chinese (China))</option>
+                </select>
+                <span class="error">&nbsp;</span>
+                <i class="help-tip icon-question-sign" href="#primary_language"></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align:top;padding-top:4px;">Secondary Languages:</td>
+            <td><div id="secondary_langs" style="width: 300px" class="ui-sortable">            <div class="secondary_lang ui-sortable-handle" style="cursor:move">
+            <i class="icon-sort"></i>&nbsp;
+            <span class="flag flag-gb"></span>&nbsp;
+            English (United Kingdom)            <input type="hidden" name="secondary_langs[]" value="en_GB">
+            <div class="pull-right">
+            <a href="#en_GB" onclick="javascript:
+                if (confirm('You sure?')) {
+                    $(this).closest('.secondary_lang')
+                        .find('input').remove();
+                    $(this).closest('.secondary_lang').slideUp();
+                }
+                return false;
+                "><i class="icon-trash"></i></a>
+            </div>
+            </div>
+            <div class="secondary_lang ui-sortable-handle" style="cursor:move">
+            <i class="icon-sort"></i>&nbsp;
+            <span class="flag flag-cn"></span>&nbsp;
+            中文（中国） (Chinese (China))            <input type="hidden" name="secondary_langs[]" value="zh_CN">
+            <div class="pull-right">
+            <a href="#zh_CN" onclick="javascript:
+                if (confirm('You sure?')) {
+                    $(this).closest('.secondary_lang')
+                        .find('input').remove();
+                    $(this).closest('.secondary_lang').slideUp();
+                }
+                return false;
+                "><i class="icon-trash"></i></a>
+            </div>
+            </div>
+            <div class="secondary_lang ui-sortable-handle" style="cursor:move">
+            <i class="icon-sort"></i>&nbsp;
+            <span class="flag flag-es"></span>&nbsp;
+            español (España) (Spanish (Spain))            <input type="hidden" name="secondary_langs[]" value="es_ES">
+            <div class="pull-right">
+            <a href="#es_ES" onclick="javascript:
+                if (confirm('You sure?')) {
+                    $(this).closest('.secondary_lang')
+                        .find('input').remove();
+                    $(this).closest('.secondary_lang').slideUp();
+                }
+                return false;
+                "><i class="icon-trash"></i></a>
+            </div>
+            </div>
+            <script type="text/javascript" class="ui-sortable-handle" style=""></script>
+            </div>
+            <i class="icon-plus-sign"></i>&nbsp;
+            <select name="add_secondary_language">
+                <option value="">— Add a Language —</option>
+            </select>
+            <span class="error">&nbsp;</span>
+            <i class="help-tip icon-question-sign" href="#secondary_language"></i>
+        </td></tr>
+        <tr>
+            <th colspan="2">
+                <em><b>Attachments Storage and Settings</b>:<i class="help-tip icon-question-sign" href="#attachments"></i></em>
+            </th>
+        </tr>
+        <tr>
+            <td width="180">Store Attachments:</td>
+            <td><select name="default_storage_bk"><option value="D">In the database</option><option selected="selected" value="F">Filesystem: attachment</option>                </select>
+                &nbsp;<font class="error">*&nbsp;</font>
+                <i class="help-tip icon-question-sign" href="#default_storage_bk"></i>
+            </td>
+        </tr>
+        <tr>
+            <td width="180">Agent Maximum File Size:</td>
+            <td>
+                <select name="max_file_size">
+                    <option value="262144">— Small —</option>
+                                            <option value="524288">512 kb</option>                        <option value="1048576">1 mb</option>                        <option value="2097152">2 mb</option>                        <option value="4194304">4 mb</option>                        <option value="8388608" selected="selected">8 mb</option>                        <option value="16777216">16 mb</option>                        <option value="31457280">30 mb</option>                </select>
+                <i class="help-tip icon-question-sign" href="#max_file_size"></i>
+                <div class="error"></div>
+            </td>
+        </tr>
+        <tr>
+            <td width="180">Login required:</td>
+            <td>
+                <input type="checkbox" name="files_req_auth" checked="checked">
+                Require login to view any attachments                <i class="help-tip icon-question-sign" href="#files_req_auth"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p style="text-align:center;">
+    <input class="button" type="submit" name="submit" value="Save Changes">
+    <input class="button" type="reset" name="reset" value="Reset Changes">
+</p>
+</form>
+<script type="text/javascript">$(function(){$('#secondary_langs').sortable({cursor:'move'});var prev=[];$('input.date-format-preview').keyup(function(){var name=$(this).attr('name'),div=$('span.date-format-preview[data-for='+name+']'),current=$(this).val();if(prev[name]&&prev[name]==current)return;prev[name]=current;div.text('...');$.get('ajax.php/config/date-format',{format:$(this).val()}).done(function(html){div.html(html);});});});</script>
+</div>
+</div>
+    <div id="footer">
+        Copyright © 2006-2020&nbsp;TELUS International&nbsp;All Rights Reserved.    </div>
+    <div>
+        <!-- Do not remove <img src="autocron.php" alt="" width="1" height="1" border="0" /> or your auto cron will cease to function -->
+        <img src="/ostDemo/scp/autocron.php" alt="" width="1" height="1" border="0" data-pagespeed-url-hash="2421126502" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+        <!-- Do not remove <img src="autocron.php" alt="" width="1" height="1" border="0" /> or your auto cron will cease to function -->
+    </div>
+</div>
+<div id="overlay"></div>
+<div id="loading" style="top: 200px; left: 321.5px;">
+    <i class="icon-spinner icon-spin icon-3x pull-left icon-light"></i>
+    <h1>Loading ...</h1>
+</div>
+<div class="dialog draggable ui-draggable" style="display: none; top: 85.7143px; left: 159.5px;" id="popup">
+    <div id="popup-loading">
+        <h1 style="margin-bottom: 20px;"><i class="icon-spinner icon-spin icon-large"></i>
+        Loading ...</h1>
+    </div>
+    <div class="body"></div>
+</div>
+<div style="display: none; top: 85.7143px; left: 234.5px;" class="dialog" id="alert">
+    <h3><i class="icon-warning-sign"></i> <span id="title"></span></h3>
+    <a class="close" href=""><i class="icon-remove-circle"></i></a>
+    <hr>
+    <div id="body" style="min-height: 20px;"></div>
+    <hr style="margin-top:3em">
+    <p class="full-width">
+        <span class="buttons pull-right">
+            <input type="button" value="OK" class="close ok">
+        </span>
+     </p>
+    <div class="clear"></div>
+</div>
+
+<script src="/ostDemo/js,_jquery.pjax.js,qf1e9e88+scp,_js,_bootstrap-typeahead.js,qf1e9e88.pagespeed.jc.QZa67jWcUZ.js"></script><script>eval(mod_pagespeed_uk0QWtGo8V);</script>
+<script>eval(mod_pagespeed_95yw1lzq3r);</script>
+<script type="text/javascript" src="/ostDemo/js/jquery-ui-1.12.1.custom.min.js,qf1e9e88.pagespeed.jm.JziHmXKAth.js"></script>
+<script src="/ostDemo/js/jquery-ui-timepicker-addon.js,qf1e9e88+jquery-ui-sliderAccess.js,qf1e9e88.pagespeed.jc.DuiE6FBOwI.js"></script><script>eval(mod_pagespeed_bgCkiaY4nv);</script>
+<script>eval(mod_pagespeed_PPFznrO1bS);</script>
+<script src="/ostDemo/scp,_js,_scp.js,qf1e9e88+js,_filedrop.field.js,qf1e9e88.pagespeed.jc.IhK2qrKhdS.js"></script><script>eval(mod_pagespeed_envEG2nYWo);</script>
+<script>eval(mod_pagespeed_kZFpXaAMjH);</script>
+<script src="/ostDemo/js,_select2.min.js,qf1e9e88+scp,_js,_tips.js,qf1e9e88.pagespeed.jc.q0DUpS6Lh_.js"></script><script>eval(mod_pagespeed__ZXiV12zug);</script>
+<script>eval(mod_pagespeed_W1rLPFQTfY);</script>
+<script type="text/javascript" src="/ostDemo/js/redactor.min.js,qf1e9e88.pagespeed.ce.IDEmTYXPW7.js"></script>
+<script src="/ostDemo/js/redactor-osticket.js,qf1e9e88+redactor-plugins.js,qf1e9e88.pagespeed.jc.B2rageuZmy.js"></script><script>eval(mod_pagespeed_IAM2lJZJxI);</script>
+<script>eval(mod_pagespeed_hWr33J8Ts9);</script>
+<script src="/ostDemo/scp/js/jquery.translatable.js,qf1e9e88+jquery.dropdown.js,qf1e9e88+bootstrap-tooltip.js,qf1e9e88+jb.overflow.menu.js,qf1e9e88.pagespeed.jc.l8OESzyfjK.js"></script><script>eval(mod_pagespeed_xCl$HLHnfM);</script>
+<script>eval(mod_pagespeed_DFMQmVqjkf);</script>
+<script>eval(mod_pagespeed_NXYSzR3sd$);</script>
+<script>eval(mod_pagespeed_G6T4IJ9_xE);</script>
+
+<script type="text/javascript">getConfig().resolve({"lock_time":180,"html_thread":true,"date_format":"m\/d\/y","lang":"en_US","short_lang":"en","has_rtl":false,"lang_flag":"es","primary_lang_flag":"us","primary_language":"en-US","secondary_languages":["en_GB","zh_CN","es_ES"],"page_size":"25","path":"\/ostDemo\/"});</script>
+
+
+</body></html>

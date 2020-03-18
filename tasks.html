@@ -1,0 +1,275 @@
+<html lang="en-US"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="x-pjax-version" content="f1e9e88">
+    <title>osTicket :: Staff Control Panel</title>
+    <!--[if IE]>
+    <style type="text/css">
+        .tip_shadow { display:block !important; }
+    </style>
+    <![endif]-->
+    <script type="text/javascript" src="/ostDemo/js/jquery-3.4.0.min.js,qf1e9e88.pagespeed.jm.86wgsCDiXr.js"></script>
+    <link rel="stylesheet" href="/ostDemo/A.css,,_thread.css,,qf1e9e88+scp,,_css,,_scp.css,,qf1e9e88,Mcc.EShJ1tY69M.css.pagespeed.cf.DmQDkzszBO.css" media="all">
+    
+    <link rel="stylesheet" href="/ostDemo/A.css,,_redactor.css,,qf1e9e88+scp,,_css,,_typeahead.css,,qf1e9e88+css,,_ui-lightness,,_jquery-ui-1.10.3.custom.min.css,,qf1e9e88,Mcc.WxuA8iTDLY.css.pagespeed.cf.VXXpTnICS8.css" media="screen">
+    
+    
+    <style media="all">.ui-timepicker-div .ui-widget-header{margin-bottom:8px}.ui-timepicker-div dl{text-align:left}.ui-timepicker-div dl dt{float:left;clear:left;padding:0 0 0 5px}.ui-timepicker-div dl dd{margin:0 10px 10px 40%}.ui-timepicker-div td{font-size:90%}.ui-tpicker-grid-label{background:none;border:none;margin:0;padding:0}.ui-timepicker-div .ui_tpicker_unit_hide{display:none}.ui-timepicker-div .ui_tpicker_time .ui_tpicker_time_input{background:none;color:inherit;border:none;outline:none;border-bottom:solid 1px #555;width:95%}.ui-timepicker-div .ui_tpicker_time .ui_tpicker_time_input:focus{border-bottom-color:#aaa}.ui-timepicker-rtl{direction:rtl}.ui-timepicker-rtl dl{text-align:right;padding:0 5px 0 0}.ui-timepicker-rtl dl dt{float:right;clear:right}.ui-timepicker-rtl dl dd{margin:0 40% 10px 10px}.ui-timepicker-div.ui-timepicker-oneLine{padding-right:2px}.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_time,.ui-timepicker-div.ui-timepicker-oneLine dt{display:none}.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_time_label{display:block;padding-top:2px}.ui-timepicker-div.ui-timepicker-oneLine dl{text-align:right}.ui-timepicker-div.ui-timepicker-oneLine dl dd,.ui-timepicker-div.ui-timepicker-oneLine dl dd>div{display:inline-block;margin:0}.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_minute:before,.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_second:before{content:':';display:inline-block}.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_millisec:before,.ui-timepicker-div.ui-timepicker-oneLine dl dd.ui_tpicker_microsec:before{content:'.';display:inline-block}.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_unit_hide,.ui-timepicker-div.ui-timepicker-oneLine .ui_tpicker_unit_hide:before{display:none}</style>
+    <link type="text/css" rel="stylesheet" href="/ostDemo/css/A.font-awesome.min.css,qf1e9e88.pagespeed.cf.AwjM0kvmv6.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/ostDemo/css/font-awesome-ie7.min.css?f1e9e88"/>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="/ostDemo/scp,_css,_dropdown.css,qf1e9e88+css,_loadingbar.css,qf1e9e88+css,_flags.css,qf1e9e88+css,_select2.min.css,qf1e9e88+css,_rtl.css,qf1e9e88+scp,_css,_translatable.css,qf1e9e88+scp,_css,_dashboard.css,qf1e9e88+scp,_css,_tooltip.css,qf1e9e88.pagespeed.cc.U2bjHxRuiu.css">
+    
+    
+    
+    
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/ostDemo/images/xoscar-favicon-32x32.png.pagespeed.ic.yIYMpQSA4n.webp" sizes="32x32">
+    <link rel="icon" type="image/png" href="/ostDemo/images/xoscar-favicon-16x16.png.pagespeed.ic.KK_kYK8FCV.webp" sizes="16x16">
+
+    
+	<meta name="csrf_token" content="8b7d869bb9cbad962869a6297d82a1951847ad24">
+	<meta name="tip-namespace" content="dashboard.dashboard">
+<script type="text/javascript" src="js/ticket.js?f1e9e88"></script><script type="text/javascript" src="js/thread.js?f1e9e88"></script></head>
+<body style="overflow: auto;">
+<div id="container">
+        <div id="header">
+        <p id="info" class="pull-right no-pjax">Welcome, <strong>Edelmira</strong>.                       | <a href="/ostDemo/scp/admin.php" class="no-pjax">Admin Panel</a>
+                        | <a href="/ostDemo/scp/profile.php">Profile</a>
+            | <a href="/ostDemo/scp/logout.php?auth=1d3791fce49c5714c055b4320eaab179" class="no-pjax">Log Out</a>
+        </p>
+        <a href="/ostDemo/scp/index.php" class="no-pjax" id="logo">
+            <span class="valign-helper"></span>
+            <script data-pagespeed-no-defer="" type="text/javascript">//<![CDATA[
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','https://webappstest02.telusinternational.com/ostDemo/scp/dashboard.php','nXzXivl0t7',true,false,'vjbyHRPDx9g');
+//]]></script><img src="/ostDemo/scp/logo.php?1581691727" alt="osTicket — Customer Support System" data-pagespeed-url-hash="2821438446" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+        </a>
+    </div>
+    <div id="pjax-container" class="">    <script type="text/javascript">
+    $('#content').data('tipNamespace', 'tasks.queue');;    </script>
+            <ul id="nav">
+<li class="inactive no-pjax"><a href="/ostDemo/scp/dashboard.php">Dashboard</a><ul>
+<li><a class="logs" href="/ostDemo/scp/dashboard.php" title="" id="nav0">Dashboard</a></li><li><a class="teams" href="/ostDemo/scp/directory.php" title="" id="nav1">Agent Directory</a></li><li><a class="users" href="/ostDemo/scp/profile.php" title="" id="nav2">My Profile</a></li>
+</ul>
+
+</li>
+<li class="inactive "><a href="/ostDemo/scp/users.php">Users</a><ul>
+<li><a class="teams" href="/ostDemo/scp/users.php" title="" id="nav0">User Directory</a></li><li><a class="departments" href="/ostDemo/scp/orgs.php" title="" id="nav1">Organizations</a></li>
+</ul>
+
+</li>
+<li class="active "><a href="/ostDemo/scp/tasks.php">Tasks</a>
+</li>
+<li class="inactive "><a href="/ostDemo/scp/tickets.php">Tickets</a>
+</li>
+<li class="inactive "><a href="/ostDemo/scp/kb.php">Knowledgebase</a><ul>
+<li><a class="kb" href="/ostDemo/scp/kb.php" title="" id="nav0">FAQs</a></li><li><a class="faq-categories" href="/ostDemo/scp/categories.php" title="" id="nav1">Categories</a></li><li><a class="canned" href="/ostDemo/scp/canned.php" title="" id="nav2">Canned Responses</a></li>
+</ul>
+
+</li>
+    </ul>
+    <nav class="" id="">
+  <ul id="sub_nav">
+<li><a class="Ticket active" href="tasks.php?status=open" title="Open Tasks" id="subnav1">Open (0)</a></li><li><a class="newTicket new-task" href="#tasks/add" title="Open a New Task" id="new-task" data-dialog-config="{&quot;size&quot;:&quot;large&quot;}">New Task</a></li>  </ul>
+</nav>
+
+        <div id="content">
+        <!-- SEARCH FORM START -->
+<div id="basic_search">
+  <div class="pull-right" style="height:25px">
+    <span class="valign-helper"></span>
+    
+<span class="action-button muted" data-dropdown="#sort-dropdown" data-toggle="tooltip" title="" data-original-title="Most Recently Created">
+  <i class="icon-caret-down pull-right"></i>
+  <span><i class="icon-sort-by-attributes-alt "></i> Sort</span>
+</span>
+<div id="sort-dropdown" class="action-dropdown anchor-right" onclick="javascript:
+var query = addSearchParam({'sort': $(event.target).data('mode'), 'dir': $(event.target).data('dir')});
+$.pjax({
+    url: '?' + query,
+    timeout: 2000,
+    container: '#pjax-container'});
+return false;" style="display: none;">
+  <ul class="bleed-left">
+        <li class="active">
+        <a href="#" data-mode="created" data-dir="1">
+          <i class="icon-fixed-width icon-hand-down"></i> Most Recently Created</a>
+      </li>
+        <li>
+        <a href="#" data-mode="updated" data-dir="0">
+          <i class="icon-fixed-width "></i> Most Recently Updated</a>
+      </li>
+        <li>
+        <a href="#" data-mode="due" data-dir="0">
+          <i class="icon-fixed-width "></i> Due Soon</a>
+      </li>
+        <li>
+        <a href="#" data-mode="number" data-dir="0">
+          <i class="icon-fixed-width "></i> Task Number</a>
+      </li>
+        <li>
+        <a href="#" data-mode="hot" data-dir="0">
+          <i class="icon-fixed-width "></i> Longest Thread</a>
+      </li>
+     </ul>
+</div>
+
+   </div>
+    <form action="tasks.php" method="get" onsubmit="javascript:
+        $.pjax({
+        url:$(this).attr('action') + '?' + $(this).serialize(),
+        container:'#pjax-container',
+        timeout: 2000
+        });
+        return false;">
+        <input type="hidden" name="a" value="search">
+        <input type="hidden" name="search-type" value="">
+        <div class="attached input">
+            <input type="text" class="basic-search" data-url="ajax.php/tasks/lookup" name="query" autofocus="" size="30" value="" autocomplete="off" autocorrect="off" autocapitalize="off">
+            <button type="submit" class="attached button"><i class="icon-search"></i>
+            </button>
+        </div>
+    </form>
+
+</div>
+<!-- SEARCH FORM END -->
+<div class="clear"></div>
+<div style="margin-bottom:20px; padding-top:5px;">
+<div class="sticky placeholder"></div><div class="sticky bar opaque">
+    <div class="content" style="width: 938px;">
+        <div class="pull-left flush-left">
+            <h2><a href="/ostDemo/scp/tasks.php?_pjax=%23pjax-container" title="Refresh"><i class="icon-refresh"></i> Open Tasks</a></h2>
+        </div>
+        <div class="pull-right flush-right">
+                   </div>
+    <a class="only sticky scroll-up" href="#" data-stop="115"><i class="icon-chevron-up icon-large"></i></a></div>
+</div>
+<div class="clear"></div>
+<form action="tasks.php" method="POST" name="tasks" id="tasks">
+<input type="hidden" name="__CSRFToken__" value="8b7d869bb9cbad962869a6297d82a1951847ad24"> <input type="hidden" name="a" value="mass_process">
+ <input type="hidden" name="do" id="action" value="">
+ <input type="hidden" name="status" value="">
+ <table class="list" border="0" cellspacing="1" cellpadding="2" width="940">
+    <thead>
+        <tr>
+            	        <th width="4%">&nbsp;</th>
+            
+            <th width="8%"><a href="?sort=number&amp;dir=1&amp;" class="">Number</a></th><th width="16%"><a href="?sort=ticket&amp;dir=1&amp;" class="">Ticket</a></th><th width="20%"><a href="?sort=created&amp;dir=1&amp;" class="desc">Date Created</a></th><th width="38%"><a href="?sort=title&amp;dir=1&amp;" class="">Title</a></th><th width="16%"><a href="?sort=dept&amp;dir=1&amp;" class="">Department</a></th><th width="16%"><a href="?sort=assignee&amp;dir=1&amp;" class="">Agent</a></th>        </tr>
+     </thead>
+     <tbody>
+            </tbody>
+    <tfoot>
+     <tr>
+        <td colspan="7">
+            <i>There are no tasks matching your criteria.</i>        </td>
+     </tr>
+    </tfoot>
+    </table>
+        </form>
+</div>
+
+<div style="display: none; top: 85.7143px; left: 243px;" class="dialog" id="confirm-action">
+    <h3>Please Confirm</h3>
+    <a class="close" href=""><i class="icon-remove-circle"></i></a>
+    <hr>
+    <p class="confirm-action" style="display:none;" id="mark_overdue-confirm">
+        Are you sure want to flag the selected tasks as <font color="red"><b>overdue</b></font>?    </p>
+    <div>Please confirm to continue.</div>
+    <hr style="margin-top:1em">
+    <p class="full-width">
+        <span class="buttons pull-left">
+            <input type="button" value="No, Cancel" class="close">
+        </span>
+        <span class="buttons pull-right">
+            <input type="button" value="Yes, Do it!" class="confirm">
+        </span>
+     </p>
+    <div class="clear"></div>
+</div>
+<script type="text/javascript">
+$(function() {
+
+    $(document).off('.new-task');
+    $(document).on('click.new-task', 'a.new-task', function(e) {
+        e.preventDefault();
+        var url = 'ajax.php/'
+        +$(this).attr('href').substr(1)
+        +'?_uid='+new Date().getTime();
+        var $options = $(this).data('dialogConfig');
+        $.dialog(url, [201], function (xhr) {
+            var tid = parseInt(xhr.responseText);
+            if (tid) {
+                 window.location.href = 'tasks.php?id='+tid;
+            } else {
+                $.pjax.reload('#pjax-container');
+            }
+        }, $options);
+
+        return false;
+    });
+
+    $('[data-toggle=tooltip]').tooltip();
+});
+</script>
+</div>
+
+</div>
+    <div id="footer">
+        Copyright © 2006-2020&nbsp;TELUS International&nbsp;All Rights Reserved.    </div>
+    <div>
+        <!-- Do not remove <img src="autocron.php" alt="" width="1" height="1" border="0" /> or your auto cron will cease to function -->
+        <img src="/ostDemo/scp/autocron.php" alt="" width="1" height="1" border="0" data-pagespeed-url-hash="2421126502" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+        <!-- Do not remove <img src="autocron.php" alt="" width="1" height="1" border="0" /> or your auto cron will cease to function -->
+    </div>
+</div>
+<div id="overlay" style="display: none;"></div>
+<div id="loading" style="top: 200px; left: 330px;">
+    <i class="icon-spinner icon-spin icon-3x pull-left icon-light"></i>
+    <h1>Loading ...</h1>
+</div>
+<div class="dialog draggable ui-draggable" style="display: none; top: 85.7143px; left: 168px;" id="popup">
+    <div id="popup-loading">
+        <h1 style="margin-bottom: 20px;"><i class="icon-spinner icon-spin icon-large"></i>
+        Loading ...</h1>
+    </div>
+    <div class="body"></div>
+</div>
+<div style="display: none; top: 85.7143px; left: 243px;" class="dialog" id="alert">
+    <h3><i class="icon-warning-sign"></i> <span id="title"></span></h3>
+    <a class="close" href=""><i class="icon-remove-circle"></i></a>
+    <hr>
+    <div id="body" style="min-height: 20px;"></div>
+    <hr style="margin-top:3em">
+    <p class="full-width">
+        <span class="buttons pull-right">
+            <input type="button" value="OK" class="close ok">
+        </span>
+     </p>
+    <div class="clear"></div>
+</div>
+
+<script src="/ostDemo/js,_jquery.pjax.js,qf1e9e88+scp,_js,_bootstrap-typeahead.js,qf1e9e88.pagespeed.jc.QZa67jWcUZ.js"></script><script>eval(mod_pagespeed_uk0QWtGo8V);</script>
+<script>eval(mod_pagespeed_95yw1lzq3r);</script>
+<script type="text/javascript" src="/ostDemo/js/jquery-ui-1.12.1.custom.min.js,qf1e9e88.pagespeed.jm.JziHmXKAth.js"></script>
+<script src="/ostDemo/js/jquery-ui-timepicker-addon.js,qf1e9e88+jquery-ui-sliderAccess.js,qf1e9e88.pagespeed.jc.DuiE6FBOwI.js"></script><script>eval(mod_pagespeed_bgCkiaY4nv);</script>
+<script>eval(mod_pagespeed_PPFznrO1bS);</script>
+<script src="/ostDemo/scp,_js,_scp.js,qf1e9e88+js,_filedrop.field.js,qf1e9e88.pagespeed.jc.IhK2qrKhdS.js"></script><script>eval(mod_pagespeed_envEG2nYWo);</script>
+<script>eval(mod_pagespeed_kZFpXaAMjH);</script>
+<script src="/ostDemo/js,_select2.min.js,qf1e9e88+scp,_js,_tips.js,qf1e9e88.pagespeed.jc.q0DUpS6Lh_.js"></script><script>eval(mod_pagespeed__ZXiV12zug);</script>
+<script>eval(mod_pagespeed_W1rLPFQTfY);</script>
+<script type="text/javascript" src="/ostDemo/js/redactor.min.js,qf1e9e88.pagespeed.ce.IDEmTYXPW7.js"></script>
+<script src="/ostDemo/js/redactor-osticket.js,qf1e9e88+redactor-plugins.js,qf1e9e88.pagespeed.jc.B2rageuZmy.js"></script><script>eval(mod_pagespeed_IAM2lJZJxI);</script>
+<script>eval(mod_pagespeed_hWr33J8Ts9);</script>
+<script src="/ostDemo/scp/js/jquery.translatable.js,qf1e9e88+jquery.dropdown.js,qf1e9e88+bootstrap-tooltip.js,qf1e9e88+jb.overflow.menu.js,qf1e9e88.pagespeed.jc.l8OESzyfjK.js"></script><script>eval(mod_pagespeed_xCl$HLHnfM);</script>
+<script>eval(mod_pagespeed_DFMQmVqjkf);</script>
+<script>eval(mod_pagespeed_NXYSzR3sd$);</script>
+<script>eval(mod_pagespeed_G6T4IJ9_xE);</script>
+
+<script type="text/javascript">getConfig().resolve({"lock_time":180,"html_thread":true,"date_format":"m\/d\/y","lang":"en_US","short_lang":"en","has_rtl":false,"lang_flag":"es","primary_lang_flag":"us","primary_language":"en-US","secondary_languages":["en_GB","zh_CN","es_ES"],"page_size":"25","path":"\/ostDemo\/"});</script>
+
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><ul class="typeahead dropdown-menu" style="display: none;"></ul></body></html>
